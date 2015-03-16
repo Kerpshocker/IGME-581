@@ -27,7 +27,7 @@
 		foreach ($allRows as $row){
 			$filteredRow['Name'] = $row['Name'];
 			$filteredRow['Age'] = $row['Age'];
-			$results[]=$filteredRow;
+			$results['Users']=$filteredRow;
 		}
 		
 		// convert array to JSON string

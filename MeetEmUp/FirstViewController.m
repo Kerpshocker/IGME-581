@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 
 //constants
+//this wont work - security issues with gibson
 NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php";
 
 @interface FirstViewController ()
@@ -50,21 +51,16 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
     //dynamically built url
     NSMutableString *searchString = [NSMutableString string];
     [searchString appendString:MEETEMUP_URL];
-    //replace spaces with %20
-    NSLog(@"%@", searchString);
     
     NSURL *url = [NSURL URLWithString:searchString];
     
     //this is a data task where we request a resource
-    NSURLSessionDataTask *dataTask =
-    [_session dataTaskWithURL:url
-            completionHandler:^(NSData *data,
-                                NSURLResponse *response,
-                                NSError *error){
-                NSLog(@"data=%@", [[NSString alloc] initWithData:data
-                                                        encoding:NSUTF8StringEncoding]);
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
+                                             completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
+                NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                 if(!error){
                     NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
+                    NSLog(@"status: %i", (int)httpResp.statusCode);
                     //HTTP status code 200 is ok
                     if(httpResp.statusCode == 200){
                         NSError *jsonError;
@@ -73,12 +69,11 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
                         
                         //finally start parsing it
                         if(!jsonError){
-                            //change this
-                            NSArray *allUsers = json[@"events"][@"event"];
+                            NSArray *allUsers = json[@"Users"];
                             NSMutableArray *tempUser = [NSMutableArray array];
                             
                             if(tempUser.count == 0){
-                                User *user = [[User alloc] initWithDictionary:@{@"name" : @"No results found"}];
+                                User *user = [[User alloc] initWithDictionary:@{@"Name" : @"No results found"}];
                                 [tempUser addObject:user];
                             }
                             
