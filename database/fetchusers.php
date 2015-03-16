@@ -27,11 +27,14 @@
 		foreach ($allRows as $row){
 			$filteredRow['Name'] = $row['Name'];
 			$filteredRow['Age'] = $row['Age'];
-			$results['Users']=$filteredRow;
+			$results[]=$filteredRow;
 		}
 		
+		//associative array
+		$array = array('status'=>'success', 'numFound'=>$numFound ,'results'=>$results);
+		
 		// convert array to JSON string
-		$json = json_encode($results);
+		$json = json_encode($array);
 		header("content-type: application/json");
 		echo $json;
 	}

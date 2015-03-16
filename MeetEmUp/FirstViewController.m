@@ -9,7 +9,6 @@
 #import "FirstViewController.h"
 
 //constants
-//this wont work - security issues with gibson
 NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php";
 
 @interface FirstViewController ()
@@ -60,7 +59,6 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
                 NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
                 if(!error){
                     NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
-                    NSLog(@"status: %i", (int)httpResp.statusCode);
                     //HTTP status code 200 is ok
                     if(httpResp.statusCode == 200){
                         NSError *jsonError;
@@ -69,7 +67,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
                         
                         //finally start parsing it
                         if(!jsonError){
-                            NSArray *allUsers = json[@"Users"];
+                            NSArray *allUsers = json[@"results"];
                             NSMutableArray *tempUser = [NSMutableArray array];
                             
                             if(tempUser.count == 0){
