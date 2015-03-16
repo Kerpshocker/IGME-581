@@ -1,5 +1,5 @@
 <?php
-	define("PATH_TO_DB", "MeetEmUp.sqlite3")
+	define("PATH_TO_DB", "MeetEmUp.sqlite");
 	
 	function openDB() {
 		if(file_exists(PATH_TO_DB)) {
@@ -19,6 +19,8 @@
 				echo 'Exception: ' . $e->getMessage();
 			}
 		}
+		
+		return $db;
 	}
 	
 	//this will be used to filter out the bullshit entered by users from query params
