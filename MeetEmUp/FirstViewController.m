@@ -56,44 +56,42 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
     //this is a data task where we request a resource
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
                                              completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
-                NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
-                if(!error){
-                    NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
-                    //HTTP status code 200 is ok
-                    if(httpResp.statusCode == 200){
-                        NSError *jsonError;
-                        //conver loaded string to JSON
-                        NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
-                        
-                        //finally start parsing it
-                        if(!jsonError){
-                            NSArray *allUsers = json[@"results"];
-                            NSMutableArray *tempUser = [NSMutableArray array];
-                            
-                            if(tempUser.count == 0){
-                                User *user = [[User alloc] initWithDictionary:@{@"Name" : @"No results found"}];
-                                [tempUser addObject:user];
-                            }
-                            
-                            //loop it
-                            for(NSDictionary *d in allUsers){
-                                User *user = [[User alloc] initWithDictionary:d];
-                                [tempUser addObject:user];
-                            }
-                            
-                            //update table
-                            //why dispatch_async()?
-                            //whenever you're dealing with asynchronous network calls, you have to make sure to update UIKit classes on main thread
-                            dispatch_async(dispatch_get_main_queue(), ^{
-                                [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
-                                _data = tempUser;
-                                NSLog(@"_data: %@", _data);
-                                //[self.tableView reloadData];
-                            });
-                        }
-                    }
-                }
-            }];
+         NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+         if(!error){
+             NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
+             //HTTP status code 200 is ok
+             if(httpResp.statusCode == 200){
+                 NSError *jsonError;
+                 //conver loaded string to JSON
+                 NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                 
+                 //finally start parsing it
+                 if(!jsonError){
+                     NSArray *allUsers = json[@"results"];
+                     NSMutableArray *tempUser = [NSMutableArray array];
+                     
+                     if(allUsers.count == 0){
+                         User *user = [[User alloc] initWithDictionary:@{@"Name" : @"No results found"}];
+                         [tempUser addObject:user];
+                     }
+                     
+                     //loop it
+                     for(NSDictionary *d in allUsers){
+                         User *user = [[User alloc] initWithDictionary:d];
+                         [tempUser addObject:user];
+                     }
+                     
+                     //update table
+                     //why dispatch_async()?
+                     //whenever you're dealing with asynchronous network calls, you have to make sure to update UIKit classes on main thread
+                     dispatch_async(dispatch_get_main_queue(), ^{
+                         [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                         _data = tempUser;
+                     });
+                 }
+             }
+         }
+     }];
     //starts or resumes the data task
     [dataTask resume];
 
