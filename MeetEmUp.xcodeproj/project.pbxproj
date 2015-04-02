@@ -16,6 +16,7 @@
 		3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */; };
 		3F43FD051AB61C3500BD3100 /* MeetEmUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD041AB61C3500BD3100 /* MeetEmUpTests.m */; };
 		3F43FD131AB6356D00BD3100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD121AB6356D00BD3100 /* User.m */; };
+		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,8 @@
 		3F43FD041AB61C3500BD3100 /* MeetEmUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MeetEmUpTests.m; sourceTree = "<group>"; };
 		3F43FD111AB6356D00BD3100 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		3F43FD121AB6356D00BD3100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +102,8 @@
 				3F43FCE51AB61C3500BD3100 /* Supporting Files */,
 				3F43FD111AB6356D00BD3100 /* User.h */,
 				3F43FD121AB6356D00BD3100 /* User.m */,
+				3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */,
+				3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */,
 			);
 			path = MeetEmUp;
 			sourceTree = "<group>";
@@ -231,6 +236,7 @@
 			files = (
 				3F43FD131AB6356D00BD3100 /* User.m in Sources */,
 				3F43FCF11AB61C3500BD3100 /* SecondViewController.m in Sources */,
+				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
 				3F43FCEE1AB61C3500BD3100 /* FirstViewController.m in Sources */,
 				3F43FCE81AB61C3500BD3100 /* main.m in Sources */,
