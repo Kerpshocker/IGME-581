@@ -1,5 +1,5 @@
 //
-//  FirstViewController.h
+//  MatchesViewController.h
 //  MeetEmUp
 //
 //  Created by Student on 3/15/15.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface FirstViewController : UIViewController
+@interface MatchesViewController : UIViewController
 
 @end
 

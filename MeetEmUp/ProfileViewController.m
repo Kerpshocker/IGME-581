@@ -6,20 +6,19 @@
 //  Copyright (c) 2015 Nathaniel Kierpiec Nick Greenquist Dylan Coats Max Peabody. All rights reserved.
 //
 
-#import "SecondViewController.h"
+#import "ProfileViewController.h"
 
-@interface SecondViewController ()
+@interface ProfileViewController ()
 
 @end
 
-@implementation SecondViewController
+@implementation ProfileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    
-    
+    //self.myScrollView.contentSize = CGRectMake(320, 1500);
 }
 
 - (void)didReceiveMemoryWarning {

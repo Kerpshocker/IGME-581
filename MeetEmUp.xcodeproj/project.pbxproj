@@ -9,16 +9,20 @@
 /* Begin PBXBuildFile section */
 		3F43FCE81AB61C3500BD3100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCE71AB61C3500BD3100 /* main.m */; };
 		3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */; };
-		3F43FCEE1AB61C3500BD3100 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCED1AB61C3500BD3100 /* FirstViewController.m */; };
-		3F43FCF11AB61C3500BD3100 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCF01AB61C3500BD3100 /* SecondViewController.m */; };
+		3F43FCEE1AB61C3500BD3100 /* MatchesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCED1AB61C3500BD3100 /* MatchesViewController.m */; };
+		3F43FCF11AB61C3500BD3100 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */; };
 		3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF21AB61C3500BD3100 /* Main.storyboard */; };
 		3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF51AB61C3500BD3100 /* Images.xcassets */; };
 		3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */; };
 		3F43FD051AB61C3500BD3100 /* MeetEmUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD041AB61C3500BD3100 /* MeetEmUpTests.m */; };
 		3F43FD131AB6356D00BD3100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD121AB6356D00BD3100 /* User.m */; };
 		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
+
 		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
 		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
+
+		3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,10 +41,10 @@
 		3F43FCE71AB61C3500BD3100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F43FCE91AB61C3500BD3100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3F43FCEC1AB61C3500BD3100 /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		3F43FCED1AB61C3500BD3100 /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		3F43FCEF1AB61C3500BD3100 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		3F43FCF01AB61C3500BD3100 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3F43FCEC1AB61C3500BD3100 /* MatchesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchesViewController.h; sourceTree = "<group>"; };
+		3F43FCED1AB61C3500BD3100 /* MatchesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchesViewController.m; sourceTree = "<group>"; };
+		3F43FCEF1AB61C3500BD3100 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
+		3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3F43FCF31AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F43FCF51AB61C3500BD3100 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F43FCF81AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -51,10 +55,13 @@
 		3F43FD121AB6356D00BD3100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+
 		3FE64D371ACF22CD00F786F3 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		3FE64D3B1ACF2DDA00F786F3 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MeetEmUpScreen.png; path = Images.xcassets/first.imageset/MeetEmUpScreen.png; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,12 +105,13 @@
 			children = (
 				3F43FCE91AB61C3500BD3100 /* AppDelegate.h */,
 				3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */,
-				3F43FCEC1AB61C3500BD3100 /* FirstViewController.h */,
-				3F43FCED1AB61C3500BD3100 /* FirstViewController.m */,
-				3F43FCEF1AB61C3500BD3100 /* SecondViewController.h */,
-				3F43FCF01AB61C3500BD3100 /* SecondViewController.m */,
+				3F43FCEC1AB61C3500BD3100 /* MatchesViewController.h */,
+				3F43FCED1AB61C3500BD3100 /* MatchesViewController.m */,
+				3F43FCEF1AB61C3500BD3100 /* ProfileViewController.h */,
+				3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */,
 				3F43FCF21AB61C3500BD3100 /* Main.storyboard */,
 				3F43FCF51AB61C3500BD3100 /* Images.xcassets */,
+				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
 				3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */,
 				3F43FCE51AB61C3500BD3100 /* Supporting Files */,
 				3F43FD111AB6356D00BD3100 /* User.h */,
@@ -227,6 +235,7 @@
 				3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */,
 				3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */,
 				3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */,
+				3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,12 +254,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				3F43FD131AB6356D00BD3100 /* User.m in Sources */,
-				3F43FCF11AB61C3500BD3100 /* SecondViewController.m in Sources */,
+
 				3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */,
 				3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */,
+
+				3F43FCF11AB61C3500BD3100 /* ProfileViewController.m in Sources */,
+
 				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
-				3F43FCEE1AB61C3500BD3100 /* FirstViewController.m in Sources */,
+				3F43FCEE1AB61C3500BD3100 /* MatchesViewController.m in Sources */,
 				3F43FCE81AB61C3500BD3100 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,5 +1,5 @@
 //
-//  SecondViewController.h
+//  ProfileViewController.h
 //  MeetEmUp
 //
 //  Created by Student on 3/15/15.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SecondViewController : UIViewController
+@interface ProfileViewController : UIViewController
 
 @property (weak, nonatomic) IBOutlet UITextField *ProfileFirstName;
 @property (weak, nonatomic) IBOutlet UITextField *ProfileLastName;
