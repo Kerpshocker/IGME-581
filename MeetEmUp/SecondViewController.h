@@ -10,5 +10,9 @@
 
 @interface SecondViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UITextField *ProfileFirstName;
+@property (weak, nonatomic) IBOutlet UITextField *ProfileLastName;
+@property (weak, nonatomic) IBOutlet UIDatePicker *ProfileBirthday;
+
 @end
 

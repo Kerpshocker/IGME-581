@@ -34,14 +34,15 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+ 
+ 
+    //Going to need this method to pass data between views.
+    //Only Problem I see currently is that we need to switch the views currently so 
+    //that the profile page is the first one the user gets segue'd to.
+    //After that, pass the data from the database for the current logged in user 
+    //to that page with prepopulated information and have them fill out the rest.
 }
 */
-
-//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-//    if([segue.identifier isEqualToString:@"FirstViewController"]){
-//        FirstViewController *vc = (FirstViewController *)segue.destinationViewController;
-//    }
-//}
 
 - (IBAction)LoginPressed:(id)sender {
     [self performSegueWithIdentifier:@"ShowTabs" sender:self];
