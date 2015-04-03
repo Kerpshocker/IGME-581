@@ -17,6 +17,8 @@
 		3F43FD051AB61C3500BD3100 /* MeetEmUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD041AB61C3500BD3100 /* MeetEmUpTests.m */; };
 		3F43FD131AB6356D00BD3100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD121AB6356D00BD3100 /* User.m */; };
 		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
+		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
+		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,10 @@
 		3F43FD121AB6356D00BD3100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		3FE64D371ACF22CD00F786F3 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
+		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
+		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
+		3FE64D3B1ACF2DDA00F786F3 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +110,10 @@
 				3F43FD121AB6356D00BD3100 /* User.m */,
 				3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */,
 				3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */,
+				3FE64D371ACF22CD00F786F3 /* AccountViewController.h */,
+				3FE64D381ACF22CD00F786F3 /* AccountViewController.m */,
+				3FE64D3A1ACF2DDA00F786F3 /* Database.h */,
+				3FE64D3B1ACF2DDA00F786F3 /* Database.m */,
 			);
 			path = MeetEmUp;
 			sourceTree = "<group>";
@@ -236,6 +246,8 @@
 			files = (
 				3F43FD131AB6356D00BD3100 /* User.m in Sources */,
 				3F43FCF11AB61C3500BD3100 /* SecondViewController.m in Sources */,
+				3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */,
+				3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */,
 				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
 				3F43FCEE1AB61C3500BD3100 /* FirstViewController.m in Sources */,

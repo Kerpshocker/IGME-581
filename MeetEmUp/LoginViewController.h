@@ -10,9 +10,11 @@
 
 @interface LoginViewController : UIViewController
 
-@property (weak, nonatomic) IBOutlet UIButton *LoginButton;
+@property (weak, nonatomic) IBOutlet UITextField *UsernameText;
+@property (weak, nonatomic) IBOutlet UITextField *PasswordText;
 
 - (IBAction)LoginPressed:(id)sender;
+- (IBAction)GoToAccount:(id)sender;
 
 /*
  Going to need a create account button that directs the user to 

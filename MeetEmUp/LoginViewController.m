@@ -45,6 +45,15 @@
 */
 
 - (IBAction)LoginPressed:(id)sender {
+    //should validate the password at some point in the future
+    //right now - check to see if the username/password match
+    
+    //loop database results for the correct UN and PW (bad idea)
+    
     [self performSegueWithIdentifier:@"ShowTabs" sender:self];
+}
+
+- (IBAction)GoToAccount:(id)sender {
+    [self performSegueWithIdentifier:@"Account" sender:self];
 }
 @end
