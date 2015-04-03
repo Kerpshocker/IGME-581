@@ -8,26 +8,7 @@
 
 #import "MatchesViewController.h"
 
-<<<<<<< Updated upstream:MeetEmUp/FirstViewController.m
-@interface FirstViewController ()
-
-@end
-
-@implementation FirstViewController{
-=======
-//constants
-NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php";
-
-@interface MatchesViewController ()
-
-@end
-
 @implementation MatchesViewController{
-    //properties
-    NSMutableArray *_data;
-    NSMutableArray *_temp;
-    NSURLSession *_session;
->>>>>>> Stashed changes:MeetEmUp/MatchesViewController.m
 }
 
 - (void)viewDidLoad {
