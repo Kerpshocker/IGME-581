@@ -9,7 +9,7 @@
 #import "Database.h"
 
 //constants
-NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php";
+NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
 
 @implementation Database{
     //properties
@@ -17,7 +17,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
     NSURLSession *_session;
 }
 
-- (NSDictionary*)Data{
+- (NSDictionary*)Data:(NSString*)tableName{
     //NSURLSession is a class used to downlaod data via HTTP
     //ephemeralSessionConfig means we don't need to cache anything
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
@@ -31,6 +31,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/fetchusers.php
     //dynamically built url
     NSMutableString *searchString = [NSMutableString string];
     [searchString appendString:MEETEMUP_URL];
+    [searchString appendString:tableName];
     
     NSURL *url = [NSURL URLWithString:searchString];
     

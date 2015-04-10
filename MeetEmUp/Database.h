@@ -11,6 +11,9 @@
 
 @interface Database : NSObject
 
-- (NSMutableArray*)Data;
+//will have php file for each table
+//tableName must end with a .php ext
+//ex. fetchUsers.php
+- (NSDictionary*)Data:(NSString*)tableName;
 
 @end

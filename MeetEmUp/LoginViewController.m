@@ -8,18 +8,25 @@
 
 #import "LoginViewController.h"
 #import "MatchesViewController.h"
+#import "Database.h"
 
 @interface LoginViewController ()
 
 @end
 
-@implementation LoginViewController
+@implementation LoginViewController{
+    Database* db;
+    NSDictionary* userResults;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-
+    db = [[Database alloc] init];
+    
+    userResults = [db Data:@"fetchusers.php"];
+    NSLog(@"UserResults: %@", userResults);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -49,6 +56,7 @@
     //right now - check to see if the username/password match
     
     //loop database results for the correct UN and PW (bad idea)
+    
     
     [self performSegueWithIdentifier:@"ShowTabs" sender:self];
 }

@@ -25,8 +25,8 @@
 		$results = array();
 		// Loop through result set
 		foreach ($allRows as $row){
-			$filteredRow['Name'] = $row['Name'];
-			$filteredRow['Age'] = $row['Age'];
+			$filteredRow['Username'] = $row['Username'];
+			$filteredRow['Password'] = $row['Password'];
 			$results[]=$filteredRow;
 		}
 		

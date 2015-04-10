@@ -11,10 +11,7 @@
 				$db = new PDO('sqlite:' . PATH_TO_DB);
 				
 				//create user table
-				$db->exec("CREATE TABLE User (Name TEXT, Age TEXT)");
-				
-				//insert test data
-				$db->exec("INSERT INTO User (Name, Age) VALUES ('Nathaniel Kierpiec', '21')");
+				echo "NO TABLE EXISTS.";
 			} catch (PDOException $e) {
 				echo 'Exception: ' . $e->getMessage();
 			}
