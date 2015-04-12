@@ -19,10 +19,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-<<<<<<< HEAD
-=======
+
   //self.myScrollView.contentSize = CGRectMake(320, 1500);
->>>>>>> origin/master
 }
 
 - (void)didReceiveMemoryWarning {
