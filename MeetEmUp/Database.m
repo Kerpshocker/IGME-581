@@ -17,7 +17,8 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
     NSURLSession *_session;
 }
 
-- (NSDictionary*)Data:(NSString*)tableName{
+//wont return anything, when its done, invokes completion
+- (void)GetData:(NSString*)tableName completion:(void (^)(NSDictionary*))completion{
     //NSURLSession is a class used to downlaod data via HTTP
     //ephemeralSessionConfig means we don't need to cache anything
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
@@ -46,13 +47,13 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
                  NSError *jsonError;
                  //conver loaded string to JSON
                  json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                 
+                 completion(json);
              }
          }
      }];
     //starts or resumes the data task
     [dataTask resume];
-    
-    return json;
 }
 
 @end

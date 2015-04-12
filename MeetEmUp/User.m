@@ -14,8 +14,8 @@
 {
     self = [super init];
     if (self) {
-        self.name = dictionary[@"Name"] ? dictionary[@"Name"] : @"";
-        self.age = dictionary[@"Age"] ? dictionary[@"Age"] : @"";
+        self.username = dictionary[@"Username"] ? dictionary[@"Username"] : @"";
+        self.password = dictionary[@"Password"] ? dictionary[@"Password"] : @"";
     }
     return self;
 }

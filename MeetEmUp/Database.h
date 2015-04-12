@@ -14,6 +14,6 @@
 //will have php file for each table
 //tableName must end with a .php ext
 //ex. fetchUsers.php
-- (NSDictionary*)Data:(NSString*)tableName;
+- (void)GetData:(NSString*)tableName completion:(void (^)(NSDictionary*))completion;
 
 @end

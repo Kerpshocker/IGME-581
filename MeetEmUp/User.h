@@ -10,8 +10,8 @@
 
 @interface User : NSObject
 
-@property NSString *name;
-@property NSString *age;
+@property NSString* username;
+@property NSString* password;
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;
 
