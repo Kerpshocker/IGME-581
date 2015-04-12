@@ -7,7 +7,7 @@
 //
 
 #import "LoginViewController.h"
-#import "MatchesViewController.h"
+#import "MatchViewController.h"
 #import "Database.h"
 
 @interface LoginViewController ()

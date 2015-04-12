@@ -6,9 +6,9 @@
 //  Copyright (c) 2015 Nathaniel Kierpiec Nick Greenquist Dylan Coats Max Peabody. All rights reserved.
 //
 
-#import "MatchesViewController.h"
+#import "MatchListViewController.h"
 
-@implementation MatchesViewController{
+@implementation MatchListViewController{
 }
 
 - (void)viewDidLoad {

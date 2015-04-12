@@ -9,7 +9,6 @@
 #import <UIKit/UIKit.h>
 #import "User.h"
 
-@interface MatchesViewController : UIViewController
+@interface MatchListViewController : UIViewController
 
 @end
-
