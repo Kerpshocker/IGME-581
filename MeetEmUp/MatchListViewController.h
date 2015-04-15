@@ -15,6 +15,7 @@
 @interface MatchListViewController : UIViewController <UITableViewDelegate, UITableViewDataSource>
 
 @property NSMutableArray* users;
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 
 @end

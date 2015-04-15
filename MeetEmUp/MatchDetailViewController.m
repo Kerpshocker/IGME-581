@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    NSLog(self.matchName);
+    self.name.text = self.matchName;
 }
 
 - (void)didReceiveMemoryWarning {

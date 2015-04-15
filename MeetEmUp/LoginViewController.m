@@ -25,17 +25,23 @@
     
     [self.errorLabel setHidden:YES];
     
+    
+    //database stuff
     db = [[Database alloc] init];
     
     [db GetData:@"fetchusers.php" completion:^(NSDictionary* userResults){
-        NSArray* allUsers = userResults[@"results"];
+        //NSArray* allUsers = [NSArray array];
+        //allUsers = userResults[@"results"];
         self.users = [NSMutableArray array];
 
-        for(NSDictionary* dic in allUsers)
+        //NSLog(@"%lu", [self.users count]);
+        //NSLog(@"%lu", [allUsers count]);
+        for(NSDictionary* dic in userResults[@"results"])
         {
             User* user = [[User alloc] initWithDictionary:dic];
             [self.users addObject:user];
         }
+        NSLog(@"%lu", [self.users count]);
         
         //make some manual users to test the code
         User* newUser1 = [[User alloc] initNew];
@@ -88,7 +94,6 @@
         {
             self.loginUsername = u.username;
             self.loginPassword = u.password;
-            break;
         }
     }
     

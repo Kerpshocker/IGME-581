@@ -7,6 +7,7 @@
 //
 
 #import "MatchListViewController.h"
+#import "MatchDetailViewController.h"
 
 @implementation MatchListViewController{
     Database* db;
@@ -73,6 +74,15 @@
     User* temp = [self.users objectAtIndex:indexPath.row];
     cell.textLabel.text = temp.username;
     return cell;
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"MatchDetail"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MatchDetailViewController *destViewController = segue.destinationViewController;
+        User* temp = [self.users objectAtIndex:indexPath.row];
+        destViewController.matchName = temp.username;
+    }
 }
 
 

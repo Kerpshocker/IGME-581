@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface MatchDetailViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UITextView *Name;
+
 @property (nonatomic, strong) NSString *matchName;
+@property (weak, nonatomic) IBOutlet UILabel *name;
 
 @end
