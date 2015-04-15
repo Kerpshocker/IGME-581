@@ -12,11 +12,15 @@
 
 @end
 
-@implementation AccountViewController
+@implementation AccountViewController{
+    Database* db;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    db = [[Database alloc] init];
     
     [self.ErrorLabel setHidden:YES];
 }
@@ -48,6 +52,13 @@
             newUser.password = self.passwordText.text;
             
             //put into the database...
+            NSMutableString* query = [NSMutableString string];
+            [query appendString:@"saveuser.php?Username="];
+            [query appendString:newUser.username];
+            [query appendString:@"&Password="];
+            [query appendString:newUser.password];
+            
+            [db SaveData:query];
             
             [self performSegueWithIdentifier:@"Login" sender:self];
         }

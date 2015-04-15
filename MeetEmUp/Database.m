@@ -74,6 +74,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
     [searchString appendString:tableName]; //may have added query string parameters
     
     NSURL *url = [NSURL URLWithString:searchString];
+    NSLog(@"%@", url);
     
     //this is a data task where we request a resource
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
@@ -81,6 +82,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
          //NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
          if(!error){
              NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
+             
              //HTTP status code 200 is ok
              if(httpResp.statusCode == 200){
                  NSLog(@"We saved something?");

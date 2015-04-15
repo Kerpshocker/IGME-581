@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "User.h"
+#import "Database.h"
 
 @interface AccountViewController : UIViewController
 - (IBAction)GoToLogin:(id)sender;
