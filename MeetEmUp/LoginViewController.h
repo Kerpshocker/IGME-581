@@ -12,6 +12,12 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *UsernameText;
 @property (weak, nonatomic) IBOutlet UITextField *PasswordText;
+@property (weak, nonatomic) IBOutlet UILabel *errorLabel;
+
+@property NSMutableArray* users;
+
+@property NSString* loginUsername;
+@property NSString* loginPassword;
 
 - (IBAction)LoginPressed:(id)sender;
 - (IBAction)GoToAccount:(id)sender;

@@ -19,6 +19,7 @@
 		3F6717DC1ADAF930000C8691 /* MatchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6717DB1ADAF930000C8691 /* MatchListViewController.m */; };
 		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
 		3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */; };
+		3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */; };
 		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
 		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
 /* End PBXBuildFile section */
@@ -56,6 +57,8 @@
 		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MeetEmUpScreen.png; path = Images.xcassets/first.imageset/MeetEmUpScreen.png; sourceTree = "<group>"; };
+		3FA4D4931ADEFF89006CD755 /* MatchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchDetailViewController.h; sourceTree = "<group>"; };
+		3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchDetailViewController.m; sourceTree = "<group>"; };
 		3FE64D371ACF22CD00F786F3 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				3FE64D3B1ACF2DDA00F786F3 /* Database.m */,
 				3F6717DA1ADAF8F6000C8691 /* MatchListViewController.h */,
 				3F6717DB1ADAF930000C8691 /* MatchListViewController.m */,
+				3FA4D4931ADEFF89006CD755 /* MatchDetailViewController.h */,
+				3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */,
 			);
 			path = MeetEmUp;
 			sourceTree = "<group>";
@@ -260,6 +265,7 @@
 				3F6717DC1ADAF930000C8691 /* MatchListViewController.m in Sources */,
 				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
+				3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */,
 				3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */,
 				3F43FCE81AB61C3500BD3100 /* main.m in Sources */,
 			);

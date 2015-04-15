@@ -20,4 +20,13 @@
     return self;
 }
 
+- (instancetype)initNew
+{
+    self = [super init];
+    self.username = @"newUser";
+    self.password = @"12345";
+    
+    return self;
+}
+
 @end

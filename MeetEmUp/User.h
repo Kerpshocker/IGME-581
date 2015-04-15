@@ -14,5 +14,6 @@
 @property NSString* password;
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;
+- (instancetype) initNew;
 
 @end

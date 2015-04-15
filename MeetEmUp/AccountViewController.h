@@ -7,8 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "User.h"
 
 @interface AccountViewController : UIViewController
 - (IBAction)GoToLogin:(id)sender;
+@property (weak, nonatomic) IBOutlet UILabel *ErrorLabel;
+@property (weak, nonatomic) IBOutlet UITextField *usernameText;
+@property (weak, nonatomic) IBOutlet UITextField *passwordText;
 
 @end

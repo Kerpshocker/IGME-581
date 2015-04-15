@@ -17,6 +17,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.ErrorLabel setHidden:YES];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -35,6 +37,28 @@
 */
 
 - (IBAction)GoToLogin:(id)sender {
-    [self performSegueWithIdentifier:@"Login" sender:self];
+    //valid username and password fields
+    if([self.usernameText.text length] > 0)
+    {
+        if([self.passwordText.text length] > 0)
+        {
+            //make a user and put into the database before going back to Login
+            User* newUser = [[User alloc] initNew];
+            newUser.username = self.usernameText.text;
+            newUser.password = self.passwordText.text;
+            
+            //put into the database...
+            
+            [self performSegueWithIdentifier:@"Login" sender:self];
+        }
+        else
+        {
+            [self.ErrorLabel setHidden:NO];
+        }
+    }
+    else
+    {
+        [self.ErrorLabel setHidden:NO];
+    }
 }
 @end
