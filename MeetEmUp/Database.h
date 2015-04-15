@@ -16,4 +16,7 @@
 //ex. fetchUsers.php
 - (void)GetData:(NSString*)tableName completion:(void (^)(NSDictionary*))completion;
 
+//save data to a specific table in the db
+- (void)SaveData:(NSString*)tableName;
+
 @end
