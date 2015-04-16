@@ -18,7 +18,7 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
 }
 
 //wont return anything, when its done, invokes completion
-- (void)GetData:(NSString*)tableName completion:(void (^)(NSDictionary*))completion{
+- (void)GetData:(NSString*)fileName completion:(void (^)(NSDictionary*))completion{
     //NSURLSession is a class used to downlaod data via HTTP
     //ephemeralSessionConfig means we don't need to cache anything
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
@@ -32,14 +32,13 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
     //dynamically built url
     NSMutableString *searchString = [NSMutableString string];
     [searchString appendString:MEETEMUP_URL];
-    [searchString appendString:tableName];
+    [searchString appendString:fileName];
     
     NSURL *url = [NSURL URLWithString:searchString];
     
     //this is a data task where we request a resource
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
      completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
-         NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
          if(!error){
              NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
              //HTTP status code 200 is ok
@@ -49,15 +48,18 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
                  json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
                  
                  completion(json);
+             } else {
+                 NSLog(@"Error reading file. Status Code = %lu", httpResp.statusCode);
              }
+         } else {
+             NSLog(@"Datatask failed. Research why this would fail - Love, Nate.");
          }
      }];
     //starts or resumes the data task
     [dataTask resume];
 }
 
-//save data based on table passed in. some will have query params (THAT WE PASS IN) others wont. php file takes care of those
-- (void)SaveData:(NSString *)tableName{
+- (void)GetData:(NSString*)fileName tableView:(UITableView*)tableView completion:(void (^)(NSDictionary*))completion{
     //NSURLSession is a class used to downlaod data via HTTP
     //ephemeralSessionConfig means we don't need to cache anything
     NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
@@ -71,22 +73,71 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
     //dynamically built url
     NSMutableString *searchString = [NSMutableString string];
     [searchString appendString:MEETEMUP_URL];
-    [searchString appendString:tableName]; //may have added query string parameters
+    [searchString appendString:fileName];
     
     NSURL *url = [NSURL URLWithString:searchString];
-    NSLog(@"%@", url);
     
     //this is a data task where we request a resource
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
      completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
-         //NSLog(@"data=%@", [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+         if(!error){
+             NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
+             //HTTP status code 200 is ok
+             if(httpResp.statusCode == 200){
+                 NSError *jsonError;
+                 //conver loaded string to JSON
+                 json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&jsonError];
+                 
+                 dispatch_async(dispatch_get_main_queue(), ^{
+                     [UIApplication sharedApplication].networkActivityIndicatorVisible = NO;
+                     completion(json);
+                     [tableView reloadData];
+                 });
+             } else {
+                 NSLog(@"Error reading file. Status Code = %lu", httpResp.statusCode);
+             }
+         } else {
+             NSLog(@"Datatask failed. Research why this would fail - Love, Nate.");
+         }
+     }];
+    //starts or resumes the data task
+    [dataTask resume];
+}
+
+//save data based on table passed in. some will have query params (THAT WE PASS IN) others wont. php file takes care of those
+- (void)SaveData:(NSString *)fileName queryParams:(NSMutableArray *)queryParams{
+    //NSURLSession is a class used to downlaod data via HTTP
+    //ephemeralSessionConfig means we don't need to cache anything
+    NSURLSessionConfiguration *config = [NSURLSessionConfiguration ephemeralSessionConfiguration];
+    
+    //create a new NSURLSession
+    _session = [NSURLSession sessionWithConfiguration:config];
+    
+    //show the activity indicator in upper left of screen
+    [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
+    
+    //dynamically built url
+    NSMutableString *searchString = [NSMutableString string];
+    [searchString appendString:MEETEMUP_URL];
+    [searchString appendString:fileName];
+    [searchString appendString:[queryParams componentsJoinedByString:@"&"]];
+    
+    NSURL *url = [NSURL URLWithString:searchString];
+    
+    //this is a data task where we request a resource
+    NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url
+     completionHandler:^(NSData *data, NSURLResponse *response, NSError *error){
          if(!error){
              NSHTTPURLResponse *httpResp = (NSHTTPURLResponse*)response;
              
              //HTTP status code 200 is ok
              if(httpResp.statusCode == 200){
-                 NSLog(@"We saved something?");
+                 NSLog(@"User saved");
+             } else {
+                 NSLog(@"Error reading file. Status Code = %lu", httpResp.statusCode);
              }
+         } else {
+             NSLog(@"Datatask failed. Research why this would fail - Love, Nate.");
          }
      }];
     //starts or resumes the data task

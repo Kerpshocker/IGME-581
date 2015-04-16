@@ -51,14 +51,15 @@
             newUser.username = self.usernameText.text;
             newUser.password = self.passwordText.text;
             
+            NSMutableArray* queryParams = [NSMutableArray array];
+            [queryParams addObject:[NSString stringWithFormat:@"Username=%@", newUser.username]];
+            [queryParams addObject:[NSString stringWithFormat:@"Password=%@", newUser.password]];
+            
             //put into the database...
             NSMutableString* query = [NSMutableString string];
-            [query appendString:@"saveuser.php?Username="];
-            [query appendString:newUser.username];
-            [query appendString:@"&Password="];
-            [query appendString:newUser.password];
+            [query appendString:@"saveuser.php?"]; //THIS MUST HAVE A '?'
             
-            [db SaveData:query];
+            [db SaveData:query queryParams:queryParams];
             
             [self performSegueWithIdentifier:@"Login" sender:self];
         }

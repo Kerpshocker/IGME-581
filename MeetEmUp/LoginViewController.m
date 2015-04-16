@@ -16,7 +16,6 @@
 
 @implementation LoginViewController{
     Database* db;
-    //NSDictionary* userResults;
 }
 
 - (void)viewDidLoad {
@@ -28,34 +27,14 @@
     
     //database stuff
     db = [[Database alloc] init];
+    self.users = [NSMutableArray array];
     
     [db GetData:@"fetchusers.php" completion:^(NSDictionary* userResults){
-        //NSArray* allUsers = [NSArray array];
-        //allUsers = userResults[@"results"];
-        self.users = [NSMutableArray array];
-
-        //NSLog(@"%lu", [self.users count]);
-        //NSLog(@"%lu", [allUsers count]);
         for(NSDictionary* dic in userResults[@"results"])
         {
             User* user = [[User alloc] initWithDictionary:dic];
             [self.users addObject:user];
         }
-        NSLog(@"%lu", [self.users count]);
-        
-        //make some manual users to test the code
-        User* newUser1 = [[User alloc] initNew];
-        newUser1.username = @"nick";
-        newUser1.password = @"54321";
-        [self.users addObject:newUser1];
-        
-        User* newUser2 = [[User alloc] initNew];
-        newUser2.username = @"dylan";
-        newUser2.password = @"password";
-        [self.users addObject:newUser2];
-        
-        
-        
     }];
 }
 
