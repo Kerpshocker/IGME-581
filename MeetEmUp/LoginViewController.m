@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "MatchViewController.h"
 #import "Database.h"
+#import "TabBarController.h"
 
 @interface LoginViewController ()
 
@@ -36,6 +37,8 @@
             [self.users addObject:user];
         }
     }];
+    
+    NSLog(@"%lu", [self.users count]);
 }
 
 - (void)didReceiveMemoryWarning {
@@ -97,5 +100,14 @@
 
 - (IBAction)GoToAccount:(id)sender {
     [self performSegueWithIdentifier:@"Account" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ShowTabs"]) {
+        TabBarController *destViewController = segue.destinationViewController;
+        destViewController.name = self.loginUsername;
+        destViewController.password = self.loginPassword;
+        destViewController.username = self.loginUsername;
+    }
 }
 @end

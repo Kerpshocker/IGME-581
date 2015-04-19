@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "TabBarController.h"
 
 @interface Profile : NSObject
 

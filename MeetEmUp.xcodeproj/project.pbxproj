@@ -10,7 +10,6 @@
 		3F43FCE81AB61C3500BD3100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCE71AB61C3500BD3100 /* main.m */; };
 		3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */; };
 		3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCED1AB61C3500BD3100 /* MatchViewController.m */; };
-		3F43FCF11AB61C3500BD3100 /* ProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */; };
 		3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF21AB61C3500BD3100 /* Main.storyboard */; };
 		3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF51AB61C3500BD3100 /* Images.xcassets */; };
 		3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */; };
@@ -23,6 +22,9 @@
 		3FA4D4981ADF1B9E006CD755 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4971ADF1B9E006CD755 /* Profile.m */; };
 		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
 		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
+		3FFF63E31AE4333600BA6773 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63E21AE4333600BA6773 /* MainPageViewController.m */; };
+		3FFF63E61AE4366700BA6773 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63E51AE4366700BA6773 /* TabBarController.m */; };
+		3FFF63EC1AE43E7100BA6773 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +45,6 @@
 		3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		3F43FCEC1AB61C3500BD3100 /* MatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
 		3F43FCED1AB61C3500BD3100 /* MatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
-		3F43FCEF1AB61C3500BD3100 /* ProfileViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProfileViewController.h; sourceTree = "<group>"; };
-		3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProfileViewController.m; sourceTree = "<group>"; };
 		3F43FCF31AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F43FCF51AB61C3500BD3100 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F43FCF81AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -66,6 +66,12 @@
 		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		3FE64D3B1ACF2DDA00F786F3 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		3FFF63E11AE4333600BA6773 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		3FFF63E21AE4333600BA6773 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
+		3FFF63E41AE4366700BA6773 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
+		3FFF63E51AE4366700BA6773 /* TabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabBarController.m; sourceTree = "<group>"; };
+		3FFF63EA1AE43E7100BA6773 /* EditProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileViewController.h; sourceTree = "<group>"; };
+		3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,8 +117,6 @@
 				3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */,
 				3F43FCEC1AB61C3500BD3100 /* MatchViewController.h */,
 				3F43FCED1AB61C3500BD3100 /* MatchViewController.m */,
-				3F43FCEF1AB61C3500BD3100 /* ProfileViewController.h */,
-				3F43FCF01AB61C3500BD3100 /* ProfileViewController.m */,
 				3F43FCF21AB61C3500BD3100 /* Main.storyboard */,
 				3F43FCF51AB61C3500BD3100 /* Images.xcassets */,
 				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
@@ -132,6 +136,12 @@
 				3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */,
 				3FA4D4961ADF1B9E006CD755 /* Profile.h */,
 				3FA4D4971ADF1B9E006CD755 /* Profile.m */,
+				3FFF63E11AE4333600BA6773 /* MainPageViewController.h */,
+				3FFF63E21AE4333600BA6773 /* MainPageViewController.m */,
+				3FFF63E41AE4366700BA6773 /* TabBarController.h */,
+				3FFF63E51AE4366700BA6773 /* TabBarController.m */,
+				3FFF63EA1AE43E7100BA6773 /* EditProfileViewController.h */,
+				3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */,
 			);
 			path = MeetEmUp;
 			sourceTree = "<group>";
@@ -265,12 +275,14 @@
 			files = (
 				3FA4D4981ADF1B9E006CD755 /* Profile.m in Sources */,
 				3F43FD131AB6356D00BD3100 /* User.m in Sources */,
+				3FFF63EC1AE43E7100BA6773 /* EditProfileViewController.m in Sources */,
+				3FFF63E61AE4366700BA6773 /* TabBarController.m in Sources */,
 				3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */,
 				3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */,
-				3F43FCF11AB61C3500BD3100 /* ProfileViewController.m in Sources */,
 				3F6717DC1ADAF930000C8691 /* MatchListViewController.m in Sources */,
 				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
+				3FFF63E31AE4333600BA6773 /* MainPageViewController.m in Sources */,
 				3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */,
 				3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */,
 				3F43FCE81AB61C3500BD3100 /* main.m in Sources */,
