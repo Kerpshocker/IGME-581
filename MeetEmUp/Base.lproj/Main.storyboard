@@ -247,12 +247,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU3-cQ-HKE">
-                                <rect key="frame" x="166" y="512" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh2-Tt-jag">
                                 <rect key="frame" x="243" y="474" width="116" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
@@ -267,6 +261,12 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU3-cQ-HKE">
+                                <rect key="frame" x="86" y="512" width="202" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -431,8 +431,8 @@
                     </tabBar>
                     <connections>
                         <segue destination="7Vb-of-m8K" kind="relationship" relationship="viewControllers" id="R68-ET-PJg"/>
-                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="5FB-9I-B8J"/>
                         <segue destination="imD-gl-zP3" kind="relationship" relationship="viewControllers" id="nKc-Kp-syu"/>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="5FB-9I-B8J"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -660,7 +660,7 @@
         <scene sceneID="pMr-U0-3jR">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="imD-gl-zP3" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Matches" image="second" id="vYT-Ry-e8g"/>
+                    <tabBarItem key="tabBarItem" title="Matches" image="first" id="vYT-Ry-e8g"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="81W-Po-MKl">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
