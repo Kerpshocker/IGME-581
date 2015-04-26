@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jq5-4O-BmH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6751" systemVersion="13F1066" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="jq5-4O-BmH">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
     </dependencies>
     <scenes>
         <!--Matches-->
@@ -293,7 +293,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="1600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-SF-jEH">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Bc-SF-jEH">
                                 <rect key="frame" x="0.0" y="20" width="375" height="1600"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Edit Profile Picture:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RB7-Ln-9D8">
@@ -379,7 +379,7 @@
                                             <action selector="AddInterest:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="lQt-UR-rvX"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K9a-Ny-rgm">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGj-1S-80B">
                                         <rect key="frame" x="62" y="680" width="214" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -404,8 +404,7 @@
                     <connections>
                         <outlet property="firstNameField" destination="cx2-3a-UGW" id="Xo5-2D-50Y"/>
                         <outlet property="interestTable" destination="RvF-su-xtH" id="Wlw-09-EKU"/>
-                        <outlet property="intetestText" destination="K9a-Ny-rgm" id="c0r-qa-Un2"/>
-                        <outlet property="newInterest" destination="K9a-Ny-rgm" id="j9G-rP-xXg"/>
+                        <outlet property="interestText" destination="uGj-1S-80B" id="gtJ-yv-tIS"/>
                         <segue destination="49e-Tb-3d3" kind="show" identifier="SaveChanges" id="Kbd-wq-dFY"/>
                     </connections>
                 </viewController>

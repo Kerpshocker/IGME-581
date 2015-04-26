@@ -17,6 +17,6 @@
 @property NSInteger numCells;
 - (IBAction)SaveChanges:(id)sender;
 - (IBAction)AddInterest:(id)sender;
-@property (weak, nonatomic) IBOutlet UITextField *intetestText;
+@property (weak, nonatomic) IBOutlet UITextField *interestText;
 
 @end
