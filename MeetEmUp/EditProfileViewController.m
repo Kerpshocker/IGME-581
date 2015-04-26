@@ -20,6 +20,9 @@
     self.firstNameField.text = tabBar.name;
     self.lastNameField.text = tabBar.password;
     // Do any additional setup after loading the view.
+    
+    [self.interestTable setEditing:YES];
+
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,8 +40,41 @@
 }
 */
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return self.numCells;
+}
+
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.numCells++;
+    [self.interestTable insertRowsAtIndexPaths:nil withRowAnimation:(UITableViewRowAnimationNone)];
+}
+
+
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *simpleTableIdentifier = @"Interest";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    return cell;
+}
+
 - (IBAction)SaveChanges:(id)sender {
     [self performSegueWithIdentifier:@"SaveChanges" sender:self];
+}
+
+- (IBAction)AddInterest:(id)sender {
+    //add the what is in the text field into the table of interests
+    self.numCells++;
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SaveChanges"]) {
