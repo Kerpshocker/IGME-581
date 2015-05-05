@@ -13,10 +13,9 @@
 
 @property NSString* username;
 @property NSString* fullName;
-@property NSInteger* age;
 @property NSString* town;
+@property int age;
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;
-- (instancetype) initNew;
 
 @end

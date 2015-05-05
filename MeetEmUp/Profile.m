@@ -21,15 +21,4 @@
     return self;
 }
 
-- (instancetype)initNew
-{
-    self = [super init];
-    self.username = @"username";
-    self.fullName = @"John Doe";
-    self.town = @"town";
-    self.age = 21;
-    
-    return self;
-}
-
 @end

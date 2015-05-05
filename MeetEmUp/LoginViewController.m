@@ -79,7 +79,6 @@
         }
     }
     
-    
     //check the text fields vs which profile the user is tring to access
     if([self.loginUsername isEqualToString:self.UsernameText.text])
     {

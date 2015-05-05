@@ -47,7 +47,7 @@
         if([self.passwordText.text length] > 0)
         {
             //make a user and put into the database before going back to Login
-            User* newUser = [[User alloc] initNew];
+            User* newUser = [[User alloc] init];
             newUser.username = self.usernameText.text;
             newUser.password = self.passwordText.text;
             
@@ -57,7 +57,7 @@
             
             //put into the database...
             NSMutableString* query = [NSMutableString string];
-            [query appendString:@"saveuser.php?"]; //THIS MUST HAVE A '?'
+            [query appendString:@"saveuser.php?"];
             
             [db SaveData:query queryParams:queryParams];
             
