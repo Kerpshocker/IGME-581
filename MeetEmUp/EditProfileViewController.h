@@ -14,8 +14,7 @@
 
 @property NSMutableArray *interests;
 @property (strong, nonatomic) IBOutlet UIView *editProfView;
-@property (weak, nonatomic) IBOutlet UITextField *firstNameField;
-@property (weak, nonatomic) IBOutlet UITextField *lastNameField;
+@property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITableView *interestTable;
 @property (weak, nonatomic) IBOutlet UITextField *townField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;

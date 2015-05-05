@@ -199,7 +199,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sus-kX-A7Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2809.5" y="-1286.5"/>
+            <point key="canvasLocation" x="2922.5" y="-1294.5"/>
         </scene>
         <!--Matches-->
         <scene sceneID="hNz-n2-bh7">
@@ -438,10 +438,10 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="editProfView" destination="QS5-Rx-YEW" id="trX-IK-LK5"/>
-                        <outlet property="firstNameField" destination="cx2-3a-UGW" id="Xo5-2D-50Y"/>
                         <outlet property="imageView" destination="bpD-r0-KJe" id="hra-rM-O7S"/>
                         <outlet property="interestTable" destination="RvF-su-xtH" id="Wlw-09-EKU"/>
                         <outlet property="interestText" destination="uGj-1S-80B" id="gtJ-yv-tIS"/>
+                        <outlet property="nameField" destination="cx2-3a-UGW" id="ZjJ-W9-XxV"/>
                         <outlet property="phoneField" destination="W0i-Cl-wKI" id="TGO-Ck-YU5"/>
                         <outlet property="townField" destination="pcG-R0-TR6" id="mkH-v7-diG"/>
                         <segue destination="49e-Tb-3d3" kind="modal" identifier="SaveChanges" id="Kbd-wq-dFY"/>
@@ -877,6 +877,6 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="E0m-7M-N2j"/>
+        <segue reference="Kbd-wq-dFY"/>
     </inferredMetricsTieBreakers>
 </document>

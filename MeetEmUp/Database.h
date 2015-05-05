@@ -20,4 +20,6 @@
 //save data to a specific table in the db
 - (void)SaveData:(NSString*)fileName queryParams:(NSMutableArray*)queryParams;
 
+- (void)UpdateProfile:(NSString*)fileName postParams:(NSMutableArray*)postParams;
+
 @end

@@ -8,7 +8,9 @@
 
 #import "EditProfileViewController.h"
 
-@interface EditProfileViewController ()
+@interface EditProfileViewController (){
+    Database* db;
+}
 
 @end
 
@@ -16,11 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    db = [[Database alloc] init];
+    
     TabBarController *tabBar = (TabBarController *)self.tabBarController;
-    self.firstNameField.text = tabBar.name;
+    self.nameField.text = tabBar.name;
     self.townField.text = tabBar.town;
     self.phoneField.text = tabBar.phone;
-    self.lastNameField.text = tabBar.password;
     self.interests = tabBar.interests;
     // Do any additional setup after loading the view.
     
@@ -89,13 +92,18 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (IBAction)SaveChanges:(id)sender {
     [self performSegueWithIdentifier:@"SaveChanges" sender:self];
+    
+    //add data to database
+    NSMutableArray* changes = [[NSMutableArray alloc]init];
+    [changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
+    //add the rest
 }
 
 - (IBAction)AddInterest:(id)sender {
     //add the what is in the text field into the table of interests
     self.numCells++;
     [self.interests addObject:self.interestText.text];
-    self.interestTable.reloadData;
+    [self.interestTable reloadData];
 }
 
 - (IBAction)takePhoto:(id)sender {
@@ -138,7 +146,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"SaveChanges"]) {
         TabBarController *destViewController = segue.destinationViewController;
-        destViewController.name = self.firstNameField.text;
+        destViewController.name = self.nameField.text;
         destViewController.interests = self.interests;
         destViewController.town = self.townField.text;
         destViewController.phone = self.phoneField.text;
