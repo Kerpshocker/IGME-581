@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3F0339461AF3FD76007DA47D /* MeetEmUpScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */; };
+		3F0339471AF3FD76007DA47D /* Icon_Favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339411AF3FD76007DA47D /* Icon_Favorite.png */; };
+		3F0339481AF3FD76007DA47D /* Icon_Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339421AF3FD76007DA47D /* Icon_Profile.png */; };
+		3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339431AF3FD76007DA47D /* MEU Logo2.png */; };
+		3F03394A1AF3FD76007DA47D /* Icon_List.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339441AF3FD76007DA47D /* Icon_List.png */; };
+		3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339451AF3FD76007DA47D /* MEU App Icon2.png */; };
 		3F43FCE81AB61C3500BD3100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCE71AB61C3500BD3100 /* main.m */; };
 		3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */; };
 		3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCED1AB61C3500BD3100 /* MatchViewController.m */; };
@@ -39,6 +45,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeetEmUpScreen2.png; sourceTree = "<group>"; };
+		3F0339411AF3FD76007DA47D /* Icon_Favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Favorite.png; sourceTree = "<group>"; };
+		3F0339421AF3FD76007DA47D /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
+		3F0339431AF3FD76007DA47D /* MEU Logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU Logo2.png"; sourceTree = "<group>"; };
+		3F0339441AF3FD76007DA47D /* Icon_List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_List.png; sourceTree = "<group>"; };
+		3F0339451AF3FD76007DA47D /* MEU App Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU App Icon2.png"; sourceTree = "<group>"; };
 		3F43FCE21AB61C3500BD3100 /* MeetEmUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetEmUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43FCE61AB61C3500BD3100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43FCE71AB61C3500BD3100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -124,6 +136,12 @@
 				3F43FCF51AB61C3500BD3100 /* Images.xcassets */,
 				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
 				3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */,
+				3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */,
+				3F0339411AF3FD76007DA47D /* Icon_Favorite.png */,
+				3F0339421AF3FD76007DA47D /* Icon_Profile.png */,
+				3F0339431AF3FD76007DA47D /* MEU Logo2.png */,
+				3F0339441AF3FD76007DA47D /* Icon_List.png */,
+				3F0339451AF3FD76007DA47D /* MEU App Icon2.png */,
 				3F43FCE51AB61C3500BD3100 /* Supporting Files */,
 				3F43FD111AB6356D00BD3100 /* User.h */,
 				3F43FD121AB6356D00BD3100 /* User.m */,
@@ -257,9 +275,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0339471AF3FD76007DA47D /* Icon_Favorite.png in Resources */,
+				3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */,
 				3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */,
+				3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */,
+				3F0339461AF3FD76007DA47D /* MeetEmUpScreen2.png in Resources */,
 				3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */,
 				3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */,
+				3F03394A1AF3FD76007DA47D /* Icon_List.png in Resources */,
+				3F0339481AF3FD76007DA47D /* Icon_Profile.png in Resources */,
 				3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

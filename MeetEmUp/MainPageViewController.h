@@ -13,5 +13,9 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property NSMutableArray *interests;
+@property NSString* town;
+@property NSString* phone;
+@property NSInteger* age;
 
 @end

@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *errorLabel;
 
 @property NSMutableArray* users;
+@property (strong, nonatomic) IBOutlet UIView *loginView;
 
 @property NSString* loginUsername;
 @property NSString* loginPassword;

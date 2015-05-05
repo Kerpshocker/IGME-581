@@ -20,6 +20,9 @@
     TabBarController *tabBar = (TabBarController *)self.tabBarController;
     self.name = tabBar.name;
     self.nameLabel.text = self.name;
+    self.interests = tabBar.interests;
+    self.town = tabBar.town;
+    self.phone = tabBar.phone;
 }
 
 - (void)didReceiveMemoryWarning {
