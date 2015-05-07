@@ -35,4 +35,8 @@
 }
 */
 
+- (IBAction)MatchButton:(id)sender {
+    //add this user to an array of users that you have hit match to, but not to the actual match list. We must first check to see if they matched you too before they are added to the mutual match list
+    
+}
 @end

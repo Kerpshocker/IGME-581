@@ -25,5 +25,6 @@
 - (IBAction)takePhoto:(id)sender;
 - (IBAction)selectPhoto:(id)sender;
 @property (weak, nonatomic) IBOutlet UITextField *interestText;
+@property (nonatomic, assign) BOOL alreadyExists;
 
 @end

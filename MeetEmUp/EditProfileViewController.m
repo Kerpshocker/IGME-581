@@ -102,7 +102,21 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (IBAction)AddInterest:(id)sender {
     //add the what is in the text field into the table of interests
     self.numCells++;
-    [self.interests addObject:self.interestText.text];
+    
+    //make sure the interest doesn't already exist
+    _alreadyExists = NO;
+    for(NSString *i in self.interests)
+    {
+        if([i isEqualToString:self.interestText.text])
+        {
+            _alreadyExists = YES;
+        }
+    }
+    //make sure the new interest is legit
+    if([self.interestText.text length] > 0 && !_alreadyExists)
+    {
+        [self.interests addObject:self.interestText.text];
+    }
     [self.interestTable reloadData];
 }
 

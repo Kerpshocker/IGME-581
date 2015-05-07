@@ -12,5 +12,6 @@
 
 @property (nonatomic, strong) NSString *matchName;
 @property (weak, nonatomic) IBOutlet UILabel *name;
+- (IBAction)MatchButton:(id)sender;
 
 @end
