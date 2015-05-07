@@ -29,7 +29,7 @@
     
     _editProfView.layer.borderWidth = 5.0f;
     _editProfView.layer.borderColor = [[UIColor grayColor]CGColor];
-   _editProfView.layer.cornerRadius = 5;
+    _editProfView.layer.cornerRadius = 5;
     
     [self.interestTable setEditing:YES];
     
@@ -96,7 +96,12 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //add data to database
     NSMutableArray* changes = [[NSMutableArray alloc]init];
     [changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
-    //add the rest
+    [changes addObject:[NSString stringWithFormat:@"Name=%@", self.nameField.text]];
+    [changes addObject:[NSString stringWithFormat:@"Town=%@", self.townField.text]];
+    [changes addObject:[NSString stringWithFormat:@"Phone=%@", self.phoneField.text]];
+    //image
+    
+    [db UpdateProfile:@"editprofile.php?" postParams:changes];
 }
 
 - (IBAction)AddInterest:(id)sender {

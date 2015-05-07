@@ -9,7 +9,7 @@
 	
 	//save the new user who created an account
 	function prepareQuery($un, $pw){
-		$queryString = "INSERT INTO User VALUES \"" . $un . "\", \"" . $pw . "\"";
+		$queryString = "UPDATE User SET Username=\"" . $un . "\" WHERE Password=\"" . $pw . "\"";
 		
 		return $queryString;
 	}
