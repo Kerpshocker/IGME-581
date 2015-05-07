@@ -16,7 +16,9 @@
 @property (nonatomic, strong) NSString* username;
 @property (nonatomic, strong) NSString* password;
 @property NSString* town;
+@property NSString* phone;
 @property NSInteger* age;
+@property NSMutableArray *interests;
 
 @property NSMutableArray* users;
 

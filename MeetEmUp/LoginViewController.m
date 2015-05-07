@@ -25,6 +25,10 @@
     
     [self.errorLabel setHidden:YES];
     
+    _loginView.layer.borderWidth = 5.0f;
+    _loginView.layer.borderColor = [[UIColor grayColor]CGColor];
+    _loginView.layer.cornerRadius = 5;
+    
     
     //database stuff
     db = [[Database alloc] init];
@@ -107,6 +111,9 @@
         destViewController.name = self.loginUsername;
         destViewController.password = self.loginPassword;
         destViewController.username = self.loginUsername;
+        destViewController.interests = [NSMutableArray array];
+        destViewController.town = @"Town";
+        destViewController.phone = @"***-***-****";
     }
 }
 @end
