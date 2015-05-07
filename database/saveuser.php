@@ -17,5 +17,7 @@
 	function queryDB($queryString){ 
 		$db = openDB();
 		$result = $db->query($queryString);
+		
+		echo $result;
 	}
 ?>
