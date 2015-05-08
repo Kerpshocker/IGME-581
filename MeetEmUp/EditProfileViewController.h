@@ -27,4 +27,6 @@
 @property (weak, nonatomic) IBOutlet UITextField *interestText;
 @property (nonatomic, assign) BOOL alreadyExists;
 
+@property TabBarController *tabBar;
+
 @end

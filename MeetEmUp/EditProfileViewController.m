@@ -20,11 +20,11 @@
     [super viewDidLoad];
     db = [[Database alloc] init];
     
-    TabBarController *tabBar = (TabBarController *)self.tabBarController;
-    self.nameField.text = tabBar.name;
-    self.townField.text = tabBar.town;
-    self.phoneField.text = tabBar.phone;
-    self.interests = tabBar.interests;
+    self.tabBar = (TabBarController *)self.tabBarController;
+    self.nameField.text = self.tabBar.name;
+    self.townField.text = self.tabBar.town;
+    self.phoneField.text = self.tabBar.phone;
+    self.interests = self.tabBar.interests;
     // Do any additional setup after loading the view.
     
     _editProfView.layer.borderWidth = 5.0f;
@@ -161,9 +161,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([segue.identifier isEqualToString:@"SaveChanges"]) {
         TabBarController *destViewController = segue.destinationViewController;
         destViewController.name = self.nameField.text;
+        destViewController.username = self.nameField.text;
+        destViewController.password = self.tabBar.password;
         destViewController.interests = self.interests;
         destViewController.town = self.townField.text;
         destViewController.phone = self.phoneField.text;
+        destViewController.peopleYouMatched = self.tabBar.peopleYouMatched;
+        destViewController.mutualMatches= self.tabBar.mutualMatches;
     }
 }
 @end

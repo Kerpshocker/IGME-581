@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.name.text = self.matchName;
+    self.tabBar = (TabBarController *)self.tabBarController;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -37,6 +38,21 @@
 
 - (IBAction)MatchButton:(id)sender {
     //add this user to an array of users that you have hit match to, but not to the actual match list. We must first check to see if they matched you too before they are added to the mutual match list
-    
+    [self.tabBar.peopleYouMatched addObject:@"test"];
+    [self performSegueWithIdentifier:@"AddMatch" sender:self];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"AddMatch"]) {
+        TabBarController *destViewController = segue.destinationViewController;
+        destViewController.peopleYouMatched = self.tabBar.peopleYouMatched;
+        destViewController.mutualMatches= self.tabBar.mutualMatches;
+        destViewController.name = self.tabBar.name;
+        destViewController.username = self.tabBar.name;
+        destViewController.password = self.tabBar.password;
+        destViewController.interests = self.tabBar.interests;
+        destViewController.town = self.tabBar.town;
+        destViewController.phone = self.tabBar.phone;
+    }
 }
 @end

@@ -23,6 +23,16 @@
     self.interests = tabBar.interests;
     self.town = tabBar.town;
     self.phone = tabBar.phone;
+    
+    //matches
+    self.peopleYouMatched = tabBar.peopleYouMatched;
+    self.mutualMatches = tabBar.mutualMatches;
+    
+    NSLog(@"peopleYouMatched = %d", [tabBar.peopleYouMatched count]);
+    for(NSString *s in self.peopleYouMatched)
+    {
+        NSLog((s));
+    }
 }
 
 - (void)didReceiveMemoryWarning {

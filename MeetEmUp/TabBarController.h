@@ -22,5 +22,9 @@
 
 @property NSMutableArray* users;
 
+@property NSMutableArray* peopleYouMatched;
+@property NSMutableArray* mutualMatches;
+
+
 
 @end
