@@ -11,10 +11,10 @@
 
 @interface Profile : NSObject
 
-@property NSString* username;
-@property NSString* fullName;
-@property NSString* town;
-@property int age;
+@property NSString* name;
+@property NSMutableArray* interests;
+@property NSString* location;
+@property NSString* phone;
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;
 

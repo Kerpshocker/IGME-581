@@ -7,9 +7,11 @@
 //
 
 #import "EditProfileViewController.h"
+#import "Profile.h"
 
 @interface EditProfileViewController (){
     Database* db;
+    NSMutableArray* profiles;
 }
 
 @end
@@ -19,17 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     db = [[Database alloc] init];
+    profiles = [[NSMutableArray alloc] init];
     
-    TabBarController *tabBar = (TabBarController *)self.tabBarController;
-    self.nameField.text = tabBar.name;
-    self.townField.text = tabBar.town;
-    self.phoneField.text = tabBar.phone;
-    self.interests = tabBar.interests;
-    // Do any additional setup after loading the view.
+    [db GetData:@"fetchprofile.php" completion:^(NSDictionary* profileResults){
+        for(NSDictionary* dic in profileResults[@"results"]){
+            Profile* prof = [[Profile alloc] initWithDictionary:dic];
+            [profiles addObject:prof];
+        }
+    }];
     
     _editProfView.layer.borderWidth = 5.0f;
     _editProfView.layer.borderColor = [[UIColor grayColor]CGColor];
-   _editProfView.layer.cornerRadius = 5;
+    _editProfView.layer.cornerRadius = 5;
     
     [self.interestTable setEditing:YES];
     

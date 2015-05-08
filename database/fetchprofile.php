@@ -1,11 +1,16 @@
 <?php
 	require_once("loadDB.php");
 	
+	$qsParams = $_SERVER['QUERY_STRING'];
+	$params = queryToArray($qsParams);
+	
+	echo($params);
+	
 	$queryString = prepareQuery();
 	queryDB($queryString);
 	
 	function prepareQuery(){
-		$queryString = "SELECT * FROM Profile";
+		$queryString = "SELECT * FROM Profile WHERE 'ID' = \"" . $params['ID'] . "\"";
 		
 		return $queryString;
 	}
@@ -21,7 +26,7 @@
 		foreach($allRows as $row){
 			$filteredRow['Name'] = $row['Name'];
 			$filteredRow['Interests'] = $row['Interests'];
-			$filteredRow['Town'] = $row['Town'];
+			$filteredRow['Location'] = $row['Location'];
 			$filteredRow['Phone'] = $row['Phone'];
 			
 			$results[] = $filteredRow;

@@ -14,9 +14,10 @@
 {
     self = [super init];
     if (self) {
-        self.username = dictionary[@"Username"] ? dictionary[@"Username"] : @"";
-        self.fullName = dictionary[@"FullName"] ? dictionary[@"FullName"] : @"";
-        self.town = dictionary[@"Town"] ? dictionary[@"Town"] : @"";
+        self.name = dictionary[@"Name"] ? dictionary[@"Name"] : @"";
+        self.interests = dictionary[@"Interests"] ? dictionary[@"Interests"] : @"";
+        self.location = dictionary[@"Location"] ? dictionary[@"Location"] : @"";
+        self.phone = dictionary[@"Phone"] ? dictionary[@"Phone"] : @"";
     }
     return self;
 }
