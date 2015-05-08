@@ -13,6 +13,10 @@
 		3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339431AF3FD76007DA47D /* MEU Logo2.png */; };
 		3F03394A1AF3FD76007DA47D /* Icon_List.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339441AF3FD76007DA47D /* Icon_List.png */; };
 		3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339451AF3FD76007DA47D /* MEU App Icon2.png */; };
+		3F2A93F61AFD44E100DAAB01 /* Icon_Home.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2A93F51AFD44E100DAAB01 /* Icon_Home.png */; };
+		3F2A93F81AFD470300DAAB01 /* purple.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2A93F71AFD470300DAAB01 /* purple.png */; };
+		3F2A93FC1AFD4BA500DAAB01 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2A93FB1AFD4BA500DAAB01 /* background.png */; };
+		3F2A93FE1AFD4F8900DAAB01 /* Icon_Search.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F2A93FD1AFD4F8900DAAB01 /* Icon_Search.png */; };
 		3F43FCE81AB61C3500BD3100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCE71AB61C3500BD3100 /* main.m */; };
 		3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */; };
 		3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF21AB61C3500BD3100 /* Main.storyboard */; };
@@ -54,6 +58,10 @@
 		3F0339431AF3FD76007DA47D /* MEU Logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU Logo2.png"; sourceTree = "<group>"; };
 		3F0339441AF3FD76007DA47D /* Icon_List.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_List.png; sourceTree = "<group>"; };
 		3F0339451AF3FD76007DA47D /* MEU App Icon2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU App Icon2.png"; sourceTree = "<group>"; };
+		3F2A93F51AFD44E100DAAB01 /* Icon_Home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Home.png; sourceTree = "<group>"; };
+		3F2A93F71AFD470300DAAB01 /* purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = purple.png; sourceTree = "<group>"; };
+		3F2A93FB1AFD4BA500DAAB01 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		3F2A93FD1AFD4F8900DAAB01 /* Icon_Search.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Search.png; sourceTree = "<group>"; };
 		3F43FCE21AB61C3500BD3100 /* MeetEmUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MeetEmUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3F43FCE61AB61C3500BD3100 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3F43FCE71AB61C3500BD3100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -183,6 +191,10 @@
 		3FE8A9D41AFC3EBF00585AE4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3F2A93FD1AFD4F8900DAAB01 /* Icon_Search.png */,
+				3F2A93FB1AFD4BA500DAAB01 /* background.png */,
+				3F2A93F71AFD470300DAAB01 /* purple.png */,
+				3F2A93F51AFD44E100DAAB01 /* Icon_Home.png */,
 				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
 				3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */,
 				3F0339411AF3FD76007DA47D /* Icon_Favorite.png */,
@@ -348,13 +360,17 @@
 			files = (
 				3F0339471AF3FD76007DA47D /* Icon_Favorite.png in Resources */,
 				3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */,
+				3F2A93FC1AFD4BA500DAAB01 /* background.png in Resources */,
 				3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */,
 				3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */,
+				3F2A93F61AFD44E100DAAB01 /* Icon_Home.png in Resources */,
+				3F2A93F81AFD470300DAAB01 /* purple.png in Resources */,
 				3F0339461AF3FD76007DA47D /* MeetEmUpScreen2.png in Resources */,
 				3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */,
 				3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */,
 				3F03394A1AF3FD76007DA47D /* Icon_List.png in Resources */,
 				3F0339481AF3FD76007DA47D /* Icon_Profile.png in Resources */,
+				3F2A93FE1AFD4F8900DAAB01 /* Icon_Search.png in Resources */,
 				3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,6 +8,7 @@
 
 #import "CurrentMatchListTVC.h"
 #import "CurrentMatchTableCell.h"
+#import "AccountViewController.h"
 
 @interface CurrentMatchListTVC ()
 
@@ -98,4 +99,7 @@
 }
 */
 
+- (IBAction)logout:(id)sender {
+
+}
 @end

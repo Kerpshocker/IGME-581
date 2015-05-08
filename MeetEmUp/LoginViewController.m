@@ -24,9 +24,6 @@
     
     [self.errorLabel setHidden:YES];
     
-    _loginView.layer.borderWidth = 5.0f;
-    _loginView.layer.borderColor = [[UIColor grayColor]CGColor];
-    _loginView.layer.cornerRadius = 5;
     
     
     //database stuff

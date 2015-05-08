@@ -27,9 +27,6 @@
     self.interests = tabBar.interests;
     // Do any additional setup after loading the view.
     
-    _editProfView.layer.borderWidth = 5.0f;
-    _editProfView.layer.borderColor = [[UIColor grayColor]CGColor];
-   _editProfView.layer.cornerRadius = 5;
     
     [self.interestTable setEditing:YES];
     
