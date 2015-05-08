@@ -16,9 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jxx-6H-nmX">
-                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePics" translatesAutoresizingMaskIntoConstraints="NO" id="IK1-9z-ltb">
                                 <rect key="frame" x="1" y="64" width="383" height="527"/>
                                 <accessibility key="accessibilityConfiguration">
@@ -79,6 +76,9 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="Jxx-6H-nmX">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -89,10 +89,13 @@
                                 <rect key="frame" x="582" y="7" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30338335360000002" green="0.13147264119999999" blue="0.44622927299999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jq5-4O-BmH" kind="modal" id="y6Y-mt-lZk"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -250,6 +253,17 @@
                                         </state>
                                         <connections>
                                             <action selector="takePhoto:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="pPY-3H-4PC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMi-RV-UxK">
+                                        <rect key="frame" x="652" y="16" width="100" height="30"/>
+                                        <color key="backgroundColor" red="0.30338335360000002" green="0.13147264119999999" blue="0.44622927299999998" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Log Out">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="jq5-4O-BmH" kind="modal" id="Ytu-38-eIF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -515,7 +529,22 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="z4q-o3-PLD"/>
+                    <navigationItem key="navigationItem" id="z4q-o3-PLD">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="14z-Zl-qph">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BvO-qX-WQv">
+                                <rect key="frame" x="582" y="7" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.30338335360000002" green="0.13147264119999999" blue="0.44622927299999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Log Out">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="jq5-4O-BmH" kind="modal" id="YHv-wW-Ru9"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <value key="contentSizeForViewInPopover" type="size" width="768" height="667"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="768" height="1024"/>
@@ -588,6 +617,9 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jq5-4O-BmH" kind="modal" id="Lg7-x9-i5M"/>
+                                </connections>
                             </button>
                             <connections>
                                 <action selector="logout:" destination="Vqq-3I-An0" id="RX1-E4-DhF"/>
@@ -678,10 +710,13 @@
                                 <rect key="frame" x="582" y="7" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30338335360000002" green="0.13147264119999999" blue="0.44622927299999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jq5-4O-BmH" kind="modal" id="MFS-c8-eWH"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -808,10 +843,13 @@
                                 <rect key="frame" x="582" y="7" width="100" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.30338335360000002" green="0.13147264119999999" blue="0.44622927299999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Logout">
+                                <state key="normal" title="Log Out">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jq5-4O-BmH" kind="modal" id="ex1-23-W6p"/>
+                                </connections>
                             </button>
                         </barButtonItem>
                     </navigationItem>
@@ -824,7 +862,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MgP-Lr-iZD" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2688" y="1535"/>
+            <point key="canvasLocation" x="2624" y="1473"/>
         </scene>
     </scenes>
     <resources>
@@ -845,5 +883,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="Kbd-wq-dFY"/>
+        <segue reference="y6Y-mt-lZk"/>
     </inferredMetricsTieBreakers>
 </document>
