@@ -15,20 +15,23 @@
 		3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339451AF3FD76007DA47D /* MEU App Icon2.png */; };
 		3F43FCE81AB61C3500BD3100 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCE71AB61C3500BD3100 /* main.m */; };
 		3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */; };
-		3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FCED1AB61C3500BD3100 /* MatchViewController.m */; };
 		3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF21AB61C3500BD3100 /* Main.storyboard */; };
 		3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF51AB61C3500BD3100 /* Images.xcassets */; };
 		3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */; };
 		3F43FD051AB61C3500BD3100 /* MeetEmUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD041AB61C3500BD3100 /* MeetEmUpTests.m */; };
 		3F43FD131AB6356D00BD3100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD121AB6356D00BD3100 /* User.m */; };
 		3F65D65B1AE976360053F022 /* InterestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65D65A1AE976360053F022 /* InterestTableCell.m */; };
-		3F6717DC1ADAF930000C8691 /* MatchListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6717DB1ADAF930000C8691 /* MatchListViewController.m */; };
 		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
 		3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */; };
 		3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */; };
 		3FA4D4981ADF1B9E006CD755 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4971ADF1B9E006CD755 /* Profile.m */; };
 		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
 		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
+		3FE8A9DA1AFC401700585AE4 /* CurrentMatchDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9D91AFC401700585AE4 /* CurrentMatchDetailVC.m */; };
+		3FE8A9E51AFC4B6600585AE4 /* CurrentMatchListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9E41AFC4B6600585AE4 /* CurrentMatchListTVC.m */; };
+		3FE8A9E81AFC4DEE00585AE4 /* CurrentMatchTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9E71AFC4DEE00585AE4 /* CurrentMatchTableCell.m */; };
+		3FE8A9EB1AFC4ED500585AE4 /* SearchListTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9EA1AFC4ED500585AE4 /* SearchListTVC.m */; };
+		3FE8A9EF1AFC5CB900585AE4 /* SearchedUserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9EE1AFC5CB900585AE4 /* SearchedUserCell.m */; };
 		3FFF63E31AE4333600BA6773 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63E21AE4333600BA6773 /* MainPageViewController.m */; };
 		3FFF63E61AE4366700BA6773 /* TabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63E51AE4366700BA6773 /* TabBarController.m */; };
 		3FFF63EC1AE43E7100BA6773 /* EditProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */; };
@@ -56,8 +59,6 @@
 		3F43FCE71AB61C3500BD3100 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3F43FCE91AB61C3500BD3100 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		3F43FCEC1AB61C3500BD3100 /* MatchViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchViewController.h; sourceTree = "<group>"; };
-		3F43FCED1AB61C3500BD3100 /* MatchViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MatchViewController.m; sourceTree = "<group>"; };
 		3F43FCF31AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3F43FCF51AB61C3500BD3100 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		3F43FCF81AB61C3500BD3100 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -68,8 +69,6 @@
 		3F43FD121AB6356D00BD3100 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		3F65D6591AE976360053F022 /* InterestTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InterestTableCell.h; sourceTree = "<group>"; };
 		3F65D65A1AE976360053F022 /* InterestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestTableCell.m; sourceTree = "<group>"; };
-		3F6717DA1ADAF8F6000C8691 /* MatchListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MatchListViewController.h; sourceTree = "<group>"; };
-		3F6717DB1ADAF930000C8691 /* MatchListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchListViewController.m; sourceTree = "<group>"; };
 		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MeetEmUpScreen.png; path = Images.xcassets/first.imageset/MeetEmUpScreen.png; sourceTree = "<group>"; };
@@ -81,6 +80,16 @@
 		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
 		3FE64D3B1ACF2DDA00F786F3 /* Database.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Database.m; sourceTree = "<group>"; };
+		3FE8A9D81AFC401700585AE4 /* CurrentMatchDetailVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentMatchDetailVC.h; sourceTree = "<group>"; };
+		3FE8A9D91AFC401700585AE4 /* CurrentMatchDetailVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentMatchDetailVC.m; sourceTree = "<group>"; };
+		3FE8A9E31AFC4B6600585AE4 /* CurrentMatchListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentMatchListTVC.h; sourceTree = "<group>"; };
+		3FE8A9E41AFC4B6600585AE4 /* CurrentMatchListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentMatchListTVC.m; sourceTree = "<group>"; };
+		3FE8A9E61AFC4DEE00585AE4 /* CurrentMatchTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentMatchTableCell.h; sourceTree = "<group>"; };
+		3FE8A9E71AFC4DEE00585AE4 /* CurrentMatchTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentMatchTableCell.m; sourceTree = "<group>"; };
+		3FE8A9E91AFC4ED500585AE4 /* SearchListTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchListTVC.h; sourceTree = "<group>"; };
+		3FE8A9EA1AFC4ED500585AE4 /* SearchListTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchListTVC.m; sourceTree = "<group>"; };
+		3FE8A9ED1AFC5CB900585AE4 /* SearchedUserCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchedUserCell.h; sourceTree = "<group>"; };
+		3FE8A9EE1AFC5CB900585AE4 /* SearchedUserCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchedUserCell.m; sourceTree = "<group>"; };
 		3FFF63E11AE4333600BA6773 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
 		3FFF63E21AE4333600BA6773 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
 		3FFF63E41AE4366700BA6773 /* TabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabBarController.h; sourceTree = "<group>"; };
@@ -128,43 +137,19 @@
 		3F43FCE41AB61C3500BD3100 /* MeetEmUp */ = {
 			isa = PBXGroup;
 			children = (
+				3FE8A9EC1AFC579A00585AE4 /* Model */,
+				3FE8A9E21AFC4B5500585AE4 /* TVC */,
+				3FE8A9E11AFC48F200585AE4 /* Globals */,
+				3FE8A9E01AFC47E900585AE4 /* Table Cells */,
+				3FE8A9DF1AFC478700585AE4 /* VC */,
+				3FE8A9DE1AFC475600585AE4 /* Database */,
+				3FE8A9D41AFC3EBF00585AE4 /* Images */,
 				3F43FCE91AB61C3500BD3100 /* AppDelegate.h */,
 				3F43FCEA1AB61C3500BD3100 /* AppDelegate.m */,
-				3F43FCEC1AB61C3500BD3100 /* MatchViewController.h */,
-				3F43FCED1AB61C3500BD3100 /* MatchViewController.m */,
 				3F43FCF21AB61C3500BD3100 /* Main.storyboard */,
 				3F43FCF51AB61C3500BD3100 /* Images.xcassets */,
-				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
 				3F43FCF71AB61C3500BD3100 /* LaunchScreen.xib */,
-				3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */,
-				3F0339411AF3FD76007DA47D /* Icon_Favorite.png */,
-				3F0339421AF3FD76007DA47D /* Icon_Profile.png */,
-				3F0339431AF3FD76007DA47D /* MEU Logo2.png */,
-				3F0339441AF3FD76007DA47D /* Icon_List.png */,
-				3F0339451AF3FD76007DA47D /* MEU App Icon2.png */,
 				3F43FCE51AB61C3500BD3100 /* Supporting Files */,
-				3F43FD111AB6356D00BD3100 /* User.h */,
-				3F43FD121AB6356D00BD3100 /* User.m */,
-				3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */,
-				3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */,
-				3FE64D371ACF22CD00F786F3 /* AccountViewController.h */,
-				3FE64D381ACF22CD00F786F3 /* AccountViewController.m */,
-				3FE64D3A1ACF2DDA00F786F3 /* Database.h */,
-				3FE64D3B1ACF2DDA00F786F3 /* Database.m */,
-				3F6717DA1ADAF8F6000C8691 /* MatchListViewController.h */,
-				3F6717DB1ADAF930000C8691 /* MatchListViewController.m */,
-				3FA4D4931ADEFF89006CD755 /* MatchDetailViewController.h */,
-				3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */,
-				3FA4D4961ADF1B9E006CD755 /* Profile.h */,
-				3FA4D4971ADF1B9E006CD755 /* Profile.m */,
-				3FFF63E11AE4333600BA6773 /* MainPageViewController.h */,
-				3FFF63E21AE4333600BA6773 /* MainPageViewController.m */,
-				3FFF63E41AE4366700BA6773 /* TabBarController.h */,
-				3FFF63E51AE4366700BA6773 /* TabBarController.m */,
-				3FFF63EA1AE43E7100BA6773 /* EditProfileViewController.h */,
-				3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */,
-				3F65D6591AE976360053F022 /* InterestTableCell.h */,
-				3F65D65A1AE976360053F022 /* InterestTableCell.m */,
 			);
 			path = MeetEmUp;
 			sourceTree = "<group>";
@@ -193,6 +178,92 @@
 				3F43FD031AB61C3500BD3100 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3FE8A9D41AFC3EBF00585AE4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
+				3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */,
+				3F0339411AF3FD76007DA47D /* Icon_Favorite.png */,
+				3F0339421AF3FD76007DA47D /* Icon_Profile.png */,
+				3F0339431AF3FD76007DA47D /* MEU Logo2.png */,
+				3F0339441AF3FD76007DA47D /* Icon_List.png */,
+				3F0339451AF3FD76007DA47D /* MEU App Icon2.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		3FE8A9DE1AFC475600585AE4 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				3FE64D3A1ACF2DDA00F786F3 /* Database.h */,
+				3FE64D3B1ACF2DDA00F786F3 /* Database.m */,
+			);
+			name = Database;
+			sourceTree = "<group>";
+		};
+		3FE8A9DF1AFC478700585AE4 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4D4931ADEFF89006CD755 /* MatchDetailViewController.h */,
+				3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */,
+				3FFF63EA1AE43E7100BA6773 /* EditProfileViewController.h */,
+				3FFF63EB1AE43E7100BA6773 /* EditProfileViewController.m */,
+				3FFF63E11AE4333600BA6773 /* MainPageViewController.h */,
+				3FFF63E21AE4333600BA6773 /* MainPageViewController.m */,
+				3FE64D371ACF22CD00F786F3 /* AccountViewController.h */,
+				3FE64D381ACF22CD00F786F3 /* AccountViewController.m */,
+				3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */,
+				3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */,
+				3FE8A9D81AFC401700585AE4 /* CurrentMatchDetailVC.h */,
+				3FE8A9D91AFC401700585AE4 /* CurrentMatchDetailVC.m */,
+			);
+			name = VC;
+			sourceTree = "<group>";
+		};
+		3FE8A9E01AFC47E900585AE4 /* Table Cells */ = {
+			isa = PBXGroup;
+			children = (
+				3F65D6591AE976360053F022 /* InterestTableCell.h */,
+				3F65D65A1AE976360053F022 /* InterestTableCell.m */,
+				3FE8A9E61AFC4DEE00585AE4 /* CurrentMatchTableCell.h */,
+				3FE8A9E71AFC4DEE00585AE4 /* CurrentMatchTableCell.m */,
+				3FE8A9ED1AFC5CB900585AE4 /* SearchedUserCell.h */,
+				3FE8A9EE1AFC5CB900585AE4 /* SearchedUserCell.m */,
+			);
+			name = "Table Cells";
+			sourceTree = "<group>";
+		};
+		3FE8A9E11AFC48F200585AE4 /* Globals */ = {
+			isa = PBXGroup;
+			children = (
+				3FFF63E41AE4366700BA6773 /* TabBarController.h */,
+				3FFF63E51AE4366700BA6773 /* TabBarController.m */,
+			);
+			name = Globals;
+			sourceTree = "<group>";
+		};
+		3FE8A9E21AFC4B5500585AE4 /* TVC */ = {
+			isa = PBXGroup;
+			children = (
+				3FE8A9E31AFC4B6600585AE4 /* CurrentMatchListTVC.h */,
+				3FE8A9E41AFC4B6600585AE4 /* CurrentMatchListTVC.m */,
+				3FE8A9E91AFC4ED500585AE4 /* SearchListTVC.h */,
+				3FE8A9EA1AFC4ED500585AE4 /* SearchListTVC.m */,
+			);
+			name = TVC;
+			sourceTree = "<group>";
+		};
+		3FE8A9EC1AFC579A00585AE4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3FA4D4961ADF1B9E006CD755 /* Profile.h */,
+				3FA4D4971ADF1B9E006CD755 /* Profile.m */,
+				3F43FD111AB6356D00BD3100 /* User.h */,
+				3F43FD121AB6356D00BD3100 /* User.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -302,19 +373,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3FE8A9E81AFC4DEE00585AE4 /* CurrentMatchTableCell.m in Sources */,
+				3FE8A9EF1AFC5CB900585AE4 /* SearchedUserCell.m in Sources */,
 				3FA4D4981ADF1B9E006CD755 /* Profile.m in Sources */,
 				3F43FD131AB6356D00BD3100 /* User.m in Sources */,
 				3FFF63EC1AE43E7100BA6773 /* EditProfileViewController.m in Sources */,
 				3FFF63E61AE4366700BA6773 /* TabBarController.m in Sources */,
 				3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */,
 				3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */,
-				3F6717DC1ADAF930000C8691 /* MatchListViewController.m in Sources */,
+				3FE8A9EB1AFC4ED500585AE4 /* SearchListTVC.m in Sources */,
 				3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */,
+				3FE8A9E51AFC4B6600585AE4 /* CurrentMatchListTVC.m in Sources */,
 				3F65D65B1AE976360053F022 /* InterestTableCell.m in Sources */,
 				3F43FCEB1AB61C3500BD3100 /* AppDelegate.m in Sources */,
 				3FFF63E31AE4333600BA6773 /* MainPageViewController.m in Sources */,
 				3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */,
-				3F43FCEE1AB61C3500BD3100 /* MatchViewController.m in Sources */,
+				3FE8A9DA1AFC401700585AE4 /* CurrentMatchDetailVC.m in Sources */,
 				3F43FCE81AB61C3500BD3100 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

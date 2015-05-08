@@ -7,7 +7,6 @@
 //
 
 #import "LoginViewController.h"
-#import "MatchViewController.h"
 #import "Database.h"
 #import "TabBarController.h"
 
@@ -41,8 +40,6 @@
             [self.users addObject:user];
         }
     }];
-    
-    NSLog(@"%lu", [self.users count]);
 }
 
 - (void)didReceiveMemoryWarning {

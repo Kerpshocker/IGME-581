@@ -15,7 +15,6 @@
 //tableName must end with a .php ext
 //ex. fetchUsers.php
 - (void)GetData:(NSString*)fileName completion:(void (^)(NSDictionary*))completion;
-- (void)GetData:(NSString*)fileName tableView:(UITableView*)tableView completion:(void (^)(NSDictionary*))completion;
 
 //save data to a specific table in the db
 - (void)SaveData:(NSString*)fileName queryParams:(NSMutableArray*)queryParams;
