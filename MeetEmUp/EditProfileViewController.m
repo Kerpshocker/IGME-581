@@ -164,9 +164,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([segue.identifier isEqualToString:@"SaveChanges"]) {
         TabBarController *destViewController = segue.destinationViewController;
         destViewController.name = self.nameField.text;
+        destViewController.username = self.nameField.text;
+        destViewController.password = self.tabBar.password;
         destViewController.interests = self.interests;
         destViewController.town = self.townField.text;
         destViewController.phone = self.phoneField.text;
+        destViewController.peopleYouMatched = self.tabBar.peopleYouMatched;
+        destViewController.mutualMatches= self.tabBar.mutualMatches;
     }
 }
 @end

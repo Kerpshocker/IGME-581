@@ -12,6 +12,7 @@
 #import "Database.h"
 #import "TabBarController.h"
 #import "SearchedUserCell.h"
+#import "MatchDetailViewController.h"
 
 @interface SearchListTVC ()
 
@@ -31,6 +32,7 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
+    TabBarController *tabBar = (TabBarController *)self.tabBarController;
     db = [[Database alloc] init];
     users = [NSMutableArray array];
     
@@ -40,7 +42,15 @@
         for(NSDictionary* dic in allUsers)
         {
             User* user = [[User alloc] initWithDictionary:dic];
-            [users addObject:user];
+            
+            //dont add yourself
+            if(![user.username isEqualToString:tabBar.username])
+            {
+                [users addObject:user];
+            }
+            //dont add people we have already matched
+            //....
+            
         }
         dispatch_async(dispatch_get_main_queue(), ^(void){
             //Run UI Updates
@@ -57,6 +67,8 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 145.0;
 }
+
+
 
 #pragma mark - Table view data source
 

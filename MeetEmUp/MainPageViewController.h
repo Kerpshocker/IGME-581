@@ -18,4 +18,7 @@
 @property NSString* phone;
 @property NSInteger* age;
 
+@property NSMutableArray* peopleYouMatched;
+@property NSMutableArray* mutualMatches;
+
 @end
