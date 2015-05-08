@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface CurrentMatchListTVC : UITableViewController
+- (IBAction)logout:(id)sender;
 
 @end

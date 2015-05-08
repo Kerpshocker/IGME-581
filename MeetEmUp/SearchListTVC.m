@@ -68,10 +68,6 @@
     return 145.0;
 }
 
-- (void)tableView:(UITableView *)tableView
-didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    User* temp = [users objectAtIndex:indexPath.row];
-}
 
 
 #pragma mark - Table view data source
@@ -146,11 +142,5 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     // Pass the selected object to the new view controller.
 }
 */
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"ViewMatch"]) {
-        MatchDetailViewController *destViewController = segue.destinationViewController;
-    }
-}
 
 @end
