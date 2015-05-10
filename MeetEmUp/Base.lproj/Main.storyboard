@@ -197,10 +197,10 @@
                                             <outlet property="dataSource" destination="8rJ-Kc-sve" id="Scx-FE-fB6"/>
                                         </connections>
                                     </tableView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85W-yy-vs5">
-                                        <rect key="frame" x="674" y="147" width="46" height="30"/>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="85W-yy-vs5">
+                                        <rect key="frame" x="665" y="147" width="55" height="31"/>
                                         <color key="backgroundColor" red="0.33405251520000001" green="0.24349994999999999" blue="0.50087691329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="Add">
+                                        <state key="normal" title="Add" image="add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -209,7 +209,7 @@
                                         </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uGj-1S-80B">
-                                        <rect key="frame" x="452" y="147" width="214" height="30"/>
+                                        <rect key="frame" x="452" y="147" width="205" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
@@ -226,18 +226,6 @@
                                         </state>
                                         <connections>
                                             <action selector="selectPhoto:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="taR-oi-GsD"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txq-oG-BXH">
-                                        <rect key="frame" x="507" y="705" width="158" height="30"/>
-                                        <color key="backgroundColor" red="0.33405251520000001" green="0.24349994999999999" blue="0.50087691329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                        <state key="normal" title="Save Changes">
-                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="SaveChanges:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="r4k-Im-ReS"/>
                                         </connections>
                                     </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="purple.png" translatesAutoresizingMaskIntoConstraints="NO" id="JOy-jL-g61">
@@ -264,6 +252,17 @@
                                         </state>
                                         <connections>
                                             <segue destination="jq5-4O-BmH" kind="modal" id="Ytu-38-eIF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Txq-oG-BXH">
+                                        <rect key="frame" x="507" y="704" width="158" height="39"/>
+                                        <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                        <state key="normal" image="save_changes">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="SaveChanges:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="r4k-Im-ReS"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -515,11 +514,9 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-Sd-R8d">
-                                <rect key="frame" x="169" y="716" width="431" height="150"/>
-                                <color key="backgroundColor" red="0.33405251520000001" green="0.24349994999999999" blue="0.50087691329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="48"/>
-                                <state key="normal" title="Search for Matches">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Edj-Sd-R8d">
+                                <rect key="frame" x="264" y="687" width="240" height="60"/>
+                                <state key="normal" image="search">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -817,10 +814,15 @@
                                 <color key="textColor" red="0.37370347500000001" green="0.16326944960000001" blue="0.54515540080000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-ms-8hT">
-                                <rect key="frame" x="89" y="662" width="162" height="65"/>
-                                <color key="backgroundColor" red="0.33405251520000001" green="0.24349994999999999" blue="0.50087691329999995" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Match">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-AF-I5J">
+                                <rect key="frame" x="149" y="609" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wrf-ms-8hT">
+                                <rect key="frame" x="81" y="662" width="179" height="44"/>
+                                <state key="normal" image="match">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -828,12 +830,6 @@
                                     <action selector="MatchButton:" destination="Mp4-Kh-poE" eventType="touchUpInside" id="gEk-o3-JW1"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pHe-AF-I5J">
-                                <rect key="frame" x="149" y="609" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -873,9 +869,13 @@
         <image name="Icon_Search.png" width="22" height="31"/>
         <image name="MEU Logo2" width="276" height="276"/>
         <image name="ProfilePics" width="233" height="361"/>
+        <image name="add" width="115" height="60"/>
         <image name="background.png" width="768" height="1024"/>
         <image name="login" width="240" height="60"/>
+        <image name="match" width="240" height="60"/>
         <image name="purple.png" width="1" height="1"/>
+        <image name="save_changes" width="240" height="60"/>
+        <image name="search" width="240" height="60"/>
         <image name="signup" width="240" height="60"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
@@ -885,7 +885,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="PuG-zW-d2E"/>
-        <segue reference="Kbd-wq-dFY"/>
-        <segue reference="y6Y-mt-lZk"/>
+        <segue reference="ex1-23-W6p"/>
     </inferredMetricsTieBreakers>
 </document>
