@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+        self.id = [dictionary[@"ID"] integerValue];
         self.username = dictionary[@"Username"] ? dictionary[@"Username"] : @"";
         self.password = dictionary[@"Password"] ? dictionary[@"Password"] : @"";
     }

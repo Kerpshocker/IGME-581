@@ -12,7 +12,7 @@
 @interface Profile : NSObject
 
 @property NSString* name;
-@property NSMutableArray* interests;
+@property NSString* interests;
 @property NSString* location;
 @property NSString* phone;
 

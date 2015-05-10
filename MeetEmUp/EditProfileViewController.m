@@ -11,7 +11,7 @@
 
 @interface EditProfileViewController (){
     Database* db;
-    NSMutableArray* profiles;
+    NSMutableArray* userInterests;
 }
 
 @end
@@ -20,15 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    db = [[Database alloc] init];
-    profiles = [[NSMutableArray alloc] init];
+    TabBarController *tabBar = (TabBarController *)self.tabBarController;
+    self.id = tabBar.id;
     
-    [db GetData:@"fetchprofile.php" completion:^(NSDictionary* profileResults){
+    db = [[Database alloc] init];
+    
+    NSString* url = [NSString stringWithFormat:@"fetchprofile.php?ID=%i", self.id];
+    
+    [db GetData:url completion:^(NSDictionary* profileResults){
         for(NSDictionary* dic in profileResults[@"results"]){
             Profile* prof = [[Profile alloc] initWithDictionary:dic];
-            [profiles addObject:prof];
+            self.nameField.text = prof.name;
+            self.interests = prof.interests;
+            self.townField.text = prof.location;
+            self.phoneField.text = prof.phone;
         }
     }];
+    
+    
     
     _editProfView.layer.borderWidth = 5.0f;
     _editProfView.layer.borderColor = [[UIColor grayColor]CGColor];
@@ -74,7 +83,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return [self.interests count];
+    return 0;//[self.interests count];
 }
 
 
@@ -89,7 +98,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    cell.textLabel.text = [self.interests objectAtIndex:indexPath.row];
+    //cell.textLabel.text = [self.interests objectAtIndex:indexPath.row];
     return cell;
 }
 
@@ -98,7 +107,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //add data to database
     NSMutableArray* changes = [[NSMutableArray alloc]init];
-    [changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
+    //[changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
     //add the rest
 }
 
@@ -118,7 +127,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //make sure the new interest is legit
     if([self.interestText.text length] > 0 && !_alreadyExists)
     {
-        [self.interests addObject:self.interestText.text];
+        //[self.interests addObject:self.interestText.text];
     }
     [self.interestTable reloadData];
 }

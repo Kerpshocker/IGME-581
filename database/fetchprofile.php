@@ -2,15 +2,19 @@
 	require_once("loadDB.php");
 	
 	$qsParams = $_SERVER['QUERY_STRING'];
-	$params = queryToArray($qsParams);
-	
-	echo($params);
-	
-	$queryString = prepareQuery();
+	//parse the qsParams
+	// qsParams => associative array named $params
+	parse_str($qsParams, $params);
+
+	$queryString = prepareQuery($params);
 	queryDB($queryString);
 	
-	function prepareQuery(){
-		$queryString = "SELECT * FROM Profile WHERE 'ID' = \"" . $params['ID'] . "\"";
+	function prepareQuery($qsp){
+		if(empty($qsp)){
+			$queryString = "SELECT * FROM Profile";
+		} else{
+			$queryString = "SELECT * FROM Profile WHERE rowid = {$qsp['ID']}";
+		}
 		
 		return $queryString;
 	}
@@ -24,6 +28,7 @@
 		$results = array();
 		
 		foreach($allRows as $row){
+			$filteredRow['ID'] = $row['ID'];
 			$filteredRow['Name'] = $row['Name'];
 			$filteredRow['Interests'] = $row['Interests'];
 			$filteredRow['Location'] = $row['Location'];

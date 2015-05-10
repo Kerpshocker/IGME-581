@@ -20,6 +20,8 @@
 @property NSString* loginUsername;
 @property NSString* loginPassword;
 
+@property NSInteger loggedInUserID;
+
 - (IBAction)LoginPressed:(id)sender;
 - (IBAction)GoToAccount:(id)sender;
 

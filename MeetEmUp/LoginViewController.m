@@ -24,9 +24,6 @@
     
     [self.errorLabel setHidden:YES];
     
-    
-    
-    //database stuff
     db = [[Database alloc] init];
     self.users = [NSMutableArray array];
     
@@ -70,28 +67,25 @@
     //loop through the usernames and see if the user is tring to access a valid account
     for(User* u in self.users)
     {
+        //check the text fields vs which profile the user is tring to access
         if([u.username isEqualToString:self.UsernameText.text])
         {
-            self.loginUsername = u.username;
-            self.loginPassword = u.password;
-        }
-    }
-    
-    //check the text fields vs which profile the user is tring to access
-    if([self.loginUsername isEqualToString:self.UsernameText.text])
-    {
-            if([self.loginPassword isEqualToString:self.PasswordText.text])
+            if([u.password isEqualToString:self.PasswordText.text])
             {
+                self.loggedInUserID = u.id;
+                self.loginUsername = u.username;
+                self.loginPassword = u.password;
                 [self performSegueWithIdentifier:@"ShowTabs" sender:self];
             }
             else
             {
                 [self.errorLabel setHidden:NO];
             }
-    }
-    else
-    {
-        [self.errorLabel setHidden:NO];
+        }
+        else
+        {
+            [self.errorLabel setHidden:NO];
+        }
     }
 }
 
@@ -102,6 +96,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:@"ShowTabs"]) {
         TabBarController *destViewController = segue.destinationViewController;
+        destViewController.id = self.loggedInUserID;
         destViewController.name = self.loginUsername;
         destViewController.password = self.loginPassword;
         destViewController.username = self.loginUsername;

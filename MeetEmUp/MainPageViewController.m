@@ -18,6 +18,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     TabBarController *tabBar = (TabBarController *)self.tabBarController;
+    self.id = tabBar.id;
     self.name = tabBar.name;
     self.nameLabel.text = self.name;
     self.interests = tabBar.interests;
@@ -28,11 +29,7 @@
     self.peopleYouMatched = tabBar.peopleYouMatched;
     self.mutualMatches = tabBar.mutualMatches;
     
-    NSLog(@"peopleYouMatched = %d", [tabBar.peopleYouMatched count]);
-    for(NSString *s in self.peopleYouMatched)
-    {
-        NSLog((s));
-    }
+    NSLog(@"%i", self.id);
 }
 
 - (void)didReceiveMemoryWarning {

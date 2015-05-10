@@ -12,7 +12,8 @@
 
 @interface EditProfileViewController : UIViewController<UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 
-@property NSMutableArray *interests;
+@property NSInteger id;
+@property NSString *interests;
 @property (strong, nonatomic) IBOutlet UIView *editProfView;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITableView *interestTable;
