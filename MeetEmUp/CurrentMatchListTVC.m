@@ -9,6 +9,8 @@
 #import "CurrentMatchListTVC.h"
 #import "CurrentMatchTableCell.h"
 #import "AccountViewController.h"
+#import "CurrentMatchTableCell.h"
+#import "CurrentMatchDetailVC.h"
 
 @interface CurrentMatchListTVC ()
 
@@ -24,6 +26,9 @@
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    
+    self.name = @"test";
+    self.tabBar = (TabBarController *)self.tabBarController;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -34,15 +39,29 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [self.tabBar.peopleYouMatched count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Match" forIndexPath:indexPath];
+    
+    // Configure the cell...
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Match"];
+    }
+    
+    NSString* temp = [self.tabBar.peopleYouMatched objectAtIndex:indexPath.row];
+    CurrentMatchTableCell* customCell = (CurrentMatchTableCell*)cell;
+    customCell.matchName.text = temp;
+    
+    return cell;
 }
 
 /*
@@ -101,5 +120,18 @@
 
 - (IBAction)logout:(id)sender {
 
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Look"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        CurrentMatchDetailVC *destViewController = segue.destinationViewController;
+        NSString* temp = [self.tabBar.peopleYouMatched objectAtIndex:indexPath.row];
+        destViewController.matchName = temp;
+        destViewController.town = @"testTown";
+        destViewController.distance = @"testDistance";
+        destViewController.contact = @"testContact";
+        destViewController.interests = self.tabBar.interests;
+    }
 }
 @end
