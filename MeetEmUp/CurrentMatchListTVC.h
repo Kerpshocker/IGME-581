@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarController.h"
 
 @interface CurrentMatchListTVC : UITableViewController
 - (IBAction)logout:(id)sender;
+
+
+@property(nonatomic, retain) UITableView *tableView;
+@property (nonatomic, strong) NSString *name;
+@property TabBarController *tabBar;
 
 @end

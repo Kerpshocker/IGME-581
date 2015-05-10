@@ -10,7 +10,6 @@
 #import "User.h"
 #import "LoginViewController.h"
 #import "Database.h"
-#import "TabBarController.h"
 #import "SearchedUserCell.h"
 #import "MatchDetailViewController.h"
 
@@ -32,7 +31,8 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    TabBarController *tabBar = (TabBarController *)self.tabBarController;
+    self.name = @"test";
+    self.tabBar = (TabBarController *)self.tabBarController;
     db = [[Database alloc] init];
     users = [NSMutableArray array];
     
@@ -44,7 +44,7 @@
             User* user = [[User alloc] initWithDictionary:dic];
             
             //dont add yourself
-            if(![user.username isEqualToString:tabBar.username])
+            if(![user.username isEqualToString:self.tabBar.username])
             {
                 [users addObject:user];
             }
@@ -98,6 +98,11 @@
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView
+didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    self.name = @"he";
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -142,5 +147,17 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"ViewMatch"]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        MatchDetailViewController *destViewController = segue.destinationViewController;
+        User* temp = [users objectAtIndex:indexPath.row];
+        destViewController.matchName = temp.username;
+        destViewController.town = @"testTown";
+        destViewController.distance = @"testDistance";
+        destViewController.interests = self.tabBar.interests;
+    }
+}
 
 @end

@@ -19,6 +19,8 @@
     // Do any additional setup after loading the view.
     self.name.text = self.matchName;
     self.tabBar = (TabBarController *)self.tabBarController;
+    self.townLabel.text = self.town;
+    self.distanceLabel.text = self.distance;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,9 +38,31 @@
 }
 */
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    // Return the number of rows in the section.
+    return [self.interests count];
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    static NSString *simpleTableIdentifier = @"Interest";
+    
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+    }
+    
+    cell.textLabel.text = [self.interests objectAtIndex:indexPath.row];
+    return cell;
+}
+
 - (IBAction)MatchButton:(id)sender {
     //add this user to an array of users that you have hit match to, but not to the actual match list. We must first check to see if they matched you too before they are added to the mutual match list
-    [self.tabBar.peopleYouMatched addObject:@"test"];
+    [self.tabBar.peopleYouMatched addObject:self.matchName];
     [self performSegueWithIdentifier:@"AddMatch" sender:self];
 }
 

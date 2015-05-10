@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "TabBarController.h"
 
 @interface SearchListTVC : UITableViewController
 
 @property(nonatomic, retain) UITableView *tableView;
+@property (nonatomic, strong) NSString *name;
+@property TabBarController *tabBar;
 
 @end
