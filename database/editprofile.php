@@ -1,14 +1,15 @@
 <?php
 	require_once("loadDB.php");
 
-	$interests = $_GET['Interests'];
-	$name = $_GET['Name'];
-	$town = $_GET['Town'];
-	$phone = $_GET['Phone'];
-		
-	function prepareQuery($un, $pw){
-		$queryString = "INSERT INTO Profile (Interests, Name, Town, Phone) VALUES (\"" . $interests . "\",\"" . $name . "\",\"" . $town . "\",\"" . $phone . "\")";
+	$qsParams = $_SERVER['QUERY_STRING'];
+	parse_str($qsParams, $params);
 	
+	$queryString = prepareQuery($params);
+	queryDB($queryString);
+		
+	function prepareQuery($qsp){
+		$queryString = "UPDATE Profile SET Interests='{$qsp['Interests']}', Name='{$qsp['Name']}', Location='{$qsp['Location']}', Phone='{$qsp['Phone']}' WHERE ID={$qsp['ID']}";
+		
 		return $queryString;
 	}
 

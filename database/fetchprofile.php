@@ -13,7 +13,7 @@
 		if(empty($qsp)){
 			$queryString = "SELECT * FROM Profile";
 		} else{
-			$queryString = "SELECT * FROM Profile WHERE rowid = {$qsp['ID']}";
+			$queryString = "SELECT * FROM Profile WHERE ID = {$qsp['ID']}";
 		}
 		
 		return $queryString;

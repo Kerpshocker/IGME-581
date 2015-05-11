@@ -1,15 +1,15 @@
 <?php
 	require_once("loadDB.php");
 
-	$un = sanitize_string($_GET['Username']);
-	$pw = sanitize_string($_GET['Password']);
+	$qsParams = $_SERVER['QUERY_STRING'];
+	parse_str($qsParams, $params);
 	
-	$queryString = prepareQuery($un, $pw);
+	$queryString = prepareQuery($params);
 	queryDB($queryString);
 	
 	//save the new user who created an account
-	function prepareQuery($un, $pw){
-		$queryString = "UPDATE User SET Username=\"" . $un . "\" WHERE Password=\"" . $pw . "\"";
+	function prepareQuery($qsp){
+		$queryString = "UPDATE User SET Username='{$qsp['Username']}', Password='{$qsp['Password']}' WHERE ID={$qsp['ID']}";
 		
 		return $queryString;
 	}

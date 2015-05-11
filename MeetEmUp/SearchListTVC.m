@@ -50,8 +50,14 @@
             }
             //dont add people we have already matched
             //....
-            
         }
+        
+        for(User* user in users)
+        {
+            
+            //[db GetData:@"fetchprofile.php?" completion:<#^(NSDictionary *)completion#>]
+        }
+        
         dispatch_async(dispatch_get_main_queue(), ^(void){
             //Run UI Updates
             [self.tableView reloadData];
