@@ -21,8 +21,7 @@
     self.id = tabBar.id;
     self.name = tabBar.name;
     self.nameLabel.text = self.name;
-    self.interests = tabBar.interests;
-    [self.interests addObject:@"test"];
+    self.interestsString = tabBar.interests;
     self.town = tabBar.town;
     self.phone = tabBar.phone;
     

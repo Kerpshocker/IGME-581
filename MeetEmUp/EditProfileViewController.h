@@ -14,11 +14,16 @@
 
 @property NSInteger id;
 @property NSString *interests;
+@property NSArray *interestsArray;
+@property NSMutableArray*interestsArrayM;
 @property (strong, nonatomic) IBOutlet UIView *editProfView;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITableView *interestTable;
 @property (weak, nonatomic) IBOutlet UITextField *townField;
 @property (weak, nonatomic) IBOutlet UITextField *phoneField;
+@property NSMutableArray* peopleYouMatched;
+@property NSMutableArray* mutualMatches;
+
 @property NSInteger numCells;
 @property (strong, nonatomic) IBOutlet UIImageView *imageView;
 - (IBAction)SaveChanges:(id)sender;

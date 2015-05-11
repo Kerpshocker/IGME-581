@@ -20,22 +20,40 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    TabBarController *tabBar = (TabBarController *)self.tabBarController;
-    self.id = tabBar.id;
+    self.tabBar = (TabBarController *)self.tabBarController;
+    self.id = self.tabBar.id;
+    self.peopleYouMatched = self.tabBar.peopleYouMatched;
+    self.mutualMatches = self.tabBar.mutualMatches;
     
     db = [[Database alloc] init];
     
     NSString* url = [NSString stringWithFormat:@"fetchprofile.php?ID=%i", self.id];
     
     [db GetData:url completion:^(NSDictionary* profileResults){
+        dispatch_async(dispatch_get_main_queue(), ^(void){
         for(NSDictionary* dic in profileResults[@"results"]){
             Profile* prof = [[Profile alloc] initWithDictionary:dic];
             self.nameField.text = prof.name;
             self.interests = prof.interests;
             self.townField.text = prof.location;
             self.phoneField.text = prof.phone;
+            
+            //explode interests into array
+            self.interestsArray = [self.interests componentsSeparatedByString: @","];
+            self.interestsArrayM = [NSMutableArray array];
+            
+            for(NSString* s in self.interestsArray)
+            {
+                [self.interestsArrayM addObject:s];
+            }
         }
+            //Run UI Updates
+            [self.interestTable reloadData];
+            });
+        
     }];
+    
+    
     
     
     
@@ -83,7 +101,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;//[self.interests count];
+    return [self.interestsArrayM count];
 }
 
 
@@ -98,17 +116,20 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
     }
     
-    //cell.textLabel.text = [self.interests objectAtIndex:indexPath.row];
+    cell.textLabel.text = [self.interestsArrayM objectAtIndex:indexPath.row];
     return cell;
 }
 
 - (IBAction)SaveChanges:(id)sender {
-    [self performSegueWithIdentifier:@"SaveChanges" sender:self];
     
     //add data to database
     NSMutableArray* changes = [[NSMutableArray alloc]init];
     //[changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
     //add the rest
+    
+    [self performSegueWithIdentifier:@"SaveChanges" sender:self];
+    
+    
 }
 
 - (IBAction)AddInterest:(id)sender {
@@ -117,7 +138,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
     //make sure the interest doesn't already exist
     _alreadyExists = NO;
-    for(NSString *i in self.interests)
+    for(NSString *i in self.interestsArrayM)
     {
         if([i isEqualToString:self.interestText.text])
         {
@@ -127,7 +148,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     //make sure the new interest is legit
     if([self.interestText.text length] > 0 && !_alreadyExists)
     {
-        //[self.interests addObject:self.interestText.text];
+        [self.interestsArrayM addObject:self.interestText.text];
     }
     [self.interestTable reloadData];
 }
@@ -173,13 +194,26 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([segue.identifier isEqualToString:@"SaveChanges"]) {
         TabBarController *destViewController = segue.destinationViewController;
         destViewController.name = self.nameField.text;
-        destViewController.username = self.nameField.text;
+        destViewController.username = self.tabBar.username;
         destViewController.password = self.tabBar.password;
-        destViewController.interests = self.interests;
+        destViewController.id = self.tabBar.id;
         destViewController.town = self.townField.text;
         destViewController.phone = self.phoneField.text;
         destViewController.peopleYouMatched = self.tabBar.peopleYouMatched;
         destViewController.mutualMatches= self.tabBar.mutualMatches;
+        
+        //put the interest array back into strings
+        self.interests = [self.interestsArrayM componentsJoinedByString: @","];
+        destViewController.interests = self.interests;
+        
+        NSMutableArray* profileData = [[NSMutableArray alloc] init];
+        [profileData addObject:[NSString stringWithFormat:@"Name=%@", destViewController.name]];
+        [profileData addObject:[NSString stringWithFormat:@"Interests=%@", destViewController.interests]];
+        [profileData addObject:[NSString stringWithFormat:@"Location=%@", destViewController.town]];
+        [profileData addObject:[NSString stringWithFormat:@"Phone=%@", destViewController.phone]];
+        [profileData addObject:[NSString stringWithFormat:@"ID=%@",  [NSNumber numberWithInt:destViewController.id]]];
+        
+        [db UpdateProfile:@"editprofile.php?" postParams:profileData];
     }
 }
 @end
