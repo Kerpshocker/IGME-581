@@ -33,6 +33,7 @@
 			$filteredRow['Interests'] = $row['Interests'];
 			$filteredRow['Location'] = $row['Location'];
 			$filteredRow['Phone'] = $row['Phone'];
+			$filteredRow['CurrentMatches'] = $row['CurrentMatches'];
 			
 			$results[] = $filteredRow;
 		}

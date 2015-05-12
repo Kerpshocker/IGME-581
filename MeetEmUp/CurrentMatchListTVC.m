@@ -11,8 +11,11 @@
 #import "AccountViewController.h"
 #import "CurrentMatchTableCell.h"
 #import "CurrentMatchDetailVC.h"
+#import "Profile.h"
 
-@interface CurrentMatchListTVC ()
+@interface CurrentMatchListTVC (){
+    Database* db;
+}
 
 @end
 
@@ -21,14 +24,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    db = [[Database alloc] init];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.name = @"test";
     self.tabBar = (TabBarController *)self.tabBarController;
+    
+    for(NSString* myMatchIds in self.tabBar.peopleYouMatched)
+    {
+        [db GetData:[NSString stringWithFormat:@"fetchprofile.php?ID=%i", [myMatchIds integerValue]] completion:^(NSDictionary* matchedProfileResults){
+            
+            for(NSDictionary* matchedDic in matchedProfileResults[@"results"])
+            {
+                Profile* matchedProf = [[Profile alloc] initWithDictionary:matchedDic];
+                if(![matchedProf.currentMatches isKindOfClass:[NSNull class]])
+                {
+                    NSArray* theirMatches = [matchedProf.currentMatches componentsSeparatedByString:@","];
+                    
+                    for(NSString* theirMatchIds in theirMatches)
+                    {
+                        if([theirMatchIds integerValue] == self.tabBar.id)
+                        {
+                            [self.tabBar.mutualMatches addObject:theirMatchIds];
+                        }
+                    }
+                }
+            }
+        }];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -45,7 +73,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.tabBar.peopleYouMatched count];
+    return [self.tabBar.mutualMatches count];
 }
 
 
@@ -57,7 +85,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Match"];
     }
     
-    NSString* temp = [self.tabBar.peopleYouMatched objectAtIndex:indexPath.row];
+    NSString* temp = [self.tabBar.mutualMatches objectAtIndex:indexPath.row];
     CurrentMatchTableCell* customCell = (CurrentMatchTableCell*)cell;
     customCell.matchName.text = temp;
     

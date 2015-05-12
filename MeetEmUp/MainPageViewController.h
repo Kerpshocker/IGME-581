@@ -11,7 +11,6 @@
 
 @interface MainPageViewController : UIViewController
 
-@property NSInteger id;
 @property (nonatomic, strong) NSString *name;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property NSMutableArray *interests;

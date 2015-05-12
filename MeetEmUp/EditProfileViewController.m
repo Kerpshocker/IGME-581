@@ -31,31 +31,27 @@
     
     [db GetData:url completion:^(NSDictionary* profileResults){
         dispatch_async(dispatch_get_main_queue(), ^(void){
-        for(NSDictionary* dic in profileResults[@"results"]){
-            Profile* prof = [[Profile alloc] initWithDictionary:dic];
-            self.nameField.text = prof.name;
-            self.interests = prof.interests;
-            self.townField.text = prof.location;
-            self.phoneField.text = prof.phone;
-            
-            //explode interests into array
-            self.interestsArray = [self.interests componentsSeparatedByString: @","];
-            self.interestsArrayM = [NSMutableArray array];
-            
-            for(NSString* s in self.interestsArray)
-            {
-                [self.interestsArrayM addObject:s];
+            for(NSDictionary* dic in profileResults[@"results"]){
+                Profile* prof = [[Profile alloc] initWithDictionary:dic];
+                self.nameField.text = prof.name;
+                self.interests = prof.interests;
+                self.townField.text = prof.location;
+                self.phoneField.text = prof.phone;
+                
+                //explode interests into array
+                self.interestsArray = [self.interests componentsSeparatedByString: @","];
+                self.interestsArrayM = [NSMutableArray array];
+                
+                for(NSString* s in self.interestsArray)
+                {
+                    [self.interestsArrayM addObject:s];
+                }
             }
-        }
             //Run UI Updates
             [self.interestTable reloadData];
-            });
+        });
         
     }];
-    
-    
-    
-    
     
     _editProfView.layer.borderWidth = 5.0f;
     _editProfView.layer.borderColor = [[UIColor grayColor]CGColor];
@@ -121,15 +117,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 }
 
 - (IBAction)SaveChanges:(id)sender {
-    
-    //add data to database
-    NSMutableArray* changes = [[NSMutableArray alloc]init];
-    //[changes addObject:[NSString stringWithFormat:@"Interests=%@", [self.interests componentsJoinedByString:@","]]];
-    //add the rest
-    
     [self performSegueWithIdentifier:@"SaveChanges" sender:self];
-    
-    
 }
 
 - (IBAction)AddInterest:(id)sender {

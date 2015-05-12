@@ -15,6 +15,7 @@
 @property NSString* interests;
 @property NSString* location;
 @property NSString* phone;
+@property NSString* currentMatches;
 
 - (instancetype) initWithDictionary:(NSDictionary*)dictionary;
 

@@ -18,6 +18,7 @@
         self.interests = dictionary[@"Interests"] ? dictionary[@"Interests"] : @"";
         self.location = dictionary[@"Location"] ? dictionary[@"Location"] : @"";
         self.phone = dictionary[@"Phone"] ? dictionary[@"Phone"] : @"";
+        self.currentMatches = dictionary[@"CurrentMatches"] ? dictionary[@"CurrentMatches"] : @"";
     }
     return self;
 }

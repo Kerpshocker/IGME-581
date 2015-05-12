@@ -19,7 +19,7 @@
 
 @property NSString* loginUsername;
 @property NSString* loginPassword;
-
+@property NSMutableArray* matchedUsers;
 @property NSInteger loggedInUserID;
 
 - (IBAction)LoginPressed:(id)sender;

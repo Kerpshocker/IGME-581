@@ -7,8 +7,11 @@
 //
 
 #import "MainPageViewController.h"
+#import "Profile.h"
 
-@interface MainPageViewController ()
+@interface MainPageViewController (){
+    Database* db;
+}
 
 @end
 
@@ -17,19 +20,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    db = [[Database alloc] init];
+    self.peopleYouMatched = [NSMutableArray array];
+    
     TabBarController *tabBar = (TabBarController *)self.tabBarController;
-    self.id = tabBar.id;
-    self.name = tabBar.name;
-    self.nameLabel.text = self.name;
-    self.interestsString = tabBar.interests;
-    self.town = tabBar.town;
-    self.phone = tabBar.phone;
+    [db GetData:[NSString stringWithFormat:@"fetchprofile.php?ID=%i", tabBar.id] completion:^(NSDictionary* dic){
+        dispatch_async(dispatch_get_main_queue(), ^(void){
+            for(NSDictionary* user in dic[@"results"])
+            {
+                Profile* prof = [[Profile alloc] initWithDictionary:user];
+
+                self.name = prof.name;
+                self.nameLabel.text = prof.name;
+                self.interestsString = prof.interests;
+                self.town = prof.location;
+                self.phone = prof.phone;
+                
+                //matches
+                NSArray* temp = [prof.currentMatches componentsSeparatedByString:@","];
+                for(NSString* s in temp)
+                {
+                    [self.peopleYouMatched addObject:s];
+                }
+            }
+            
+            tabBar.name = self.name;
+            self.nameLabel.text = self.name;
+            tabBar.interests = self.interestsString;
+            tabBar.town = self.town;
+            tabBar.phone = self.phone;
+            tabBar.peopleYouMatched = self.peopleYouMatched;
+        });
+    }];
     
-    //matches
-    self.peopleYouMatched = tabBar.peopleYouMatched;
-    self.mutualMatches = tabBar.mutualMatches;
-    
-    NSLog(@"%i", self.id);
 }
 
 - (void)didReceiveMemoryWarning {

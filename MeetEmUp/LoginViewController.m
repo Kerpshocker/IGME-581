@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "Database.h"
 #import "TabBarController.h"
+#import "Profile.h"
 
 @interface LoginViewController ()
 
@@ -75,6 +76,7 @@
                 self.loggedInUserID = u.id;
                 self.loginUsername = u.username;
                 self.loginPassword = u.password;
+                
                 [self performSegueWithIdentifier:@"ShowTabs" sender:self];
             }
             else
@@ -97,14 +99,9 @@
     if ([segue.identifier isEqualToString:@"ShowTabs"]) {
         TabBarController *destViewController = segue.destinationViewController;
         destViewController.id = self.loggedInUserID;
-        destViewController.name = self.loginUsername;
         destViewController.password = self.loginPassword;
         destViewController.username = self.loginUsername;
-        destViewController.interests = [NSMutableArray array];
         destViewController.peopleYouMatched = [NSMutableArray array];
-        destViewController.mutualMatches = [NSMutableArray array];
-        destViewController.town = @"Town";
-        destViewController.phone = @"***-***-****";
     }
 }
 @end

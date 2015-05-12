@@ -74,18 +74,4 @@
         [self.ErrorLabel setHidden:NO];
     }
 }
-
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([segue.identifier isEqualToString:@"Login"]) {
-        TabBarController *destViewController = segue.destinationViewController;
-        destViewController.name = self.usernameText.text;
-        destViewController.password = self.passwordText.text;
-        destViewController.username = self.usernameText.text;
-        destViewController.interests = [NSMutableArray array];
-        destViewController.peopleYouMatched = [NSMutableArray array];
-        destViewController.mutualMatches = [NSMutableArray array];
-        destViewController.town = @"Town";
-        destViewController.phone = @"***-***-****";
-    }
-}
 @end

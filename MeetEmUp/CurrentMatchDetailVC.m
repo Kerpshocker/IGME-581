@@ -17,11 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.name.text = self.matchName;
-    self.tabBar = (TabBarController *)self.tabBarController;
-    self.townLabel.text = self.town;
-    self.distanceLabel.text = self.distance;
-    self.contactLabel.text = self.contact;
+    
 }
 
 - (void)didReceiveMemoryWarning {
