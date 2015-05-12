@@ -22,6 +22,7 @@
     // Do any additional setup after loading the view.
     db = [[Database alloc] init];
     self.peopleYouMatched = [NSMutableArray array];
+    self.mutualMatches = [NSMutableArray array];
     
     TabBarController *tabBar = (TabBarController *)self.tabBarController;
     [db GetData:[NSString stringWithFormat:@"fetchprofile.php?ID=%i", tabBar.id] completion:^(NSDictionary* dic){
@@ -37,10 +38,13 @@
                 self.phone = prof.phone;
                 
                 //matches
-                NSArray* temp = [prof.currentMatches componentsSeparatedByString:@","];
-                for(NSString* s in temp)
+                if(![prof.currentMatches isKindOfClass:[NSNull class]])
                 {
-                    [self.peopleYouMatched addObject:s];
+                    NSArray* temp = [prof.currentMatches componentsSeparatedByString:@","];
+                    for(NSString* s in temp)
+                    {
+                        [self.peopleYouMatched addObject:s];
+                    }
                 }
             }
             
@@ -50,6 +54,7 @@
             tabBar.town = self.town;
             tabBar.phone = self.phone;
             tabBar.peopleYouMatched = self.peopleYouMatched;
+            tabBar.mutualMatches = self.mutualMatches;
         });
     }];
     

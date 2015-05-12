@@ -12,16 +12,19 @@
 @interface CurrentMatchDetailVC : UIViewController
 
 @property (nonatomic, strong) NSString *matchName;
+@property NSInteger id;
+@property NSString* contact;
 @property (nonatomic, strong) NSString *town;
 @property (nonatomic, strong) NSString *distance;
-@property (nonatomic, strong) NSString *contact;
-@property NSMutableArray *interests;
-
+@property NSMutableArray *interestsArrayM;
+@property NSArray *interestsArray;
+@property NSString *interests;
 
 @property (weak, nonatomic) IBOutlet UILabel *name;
 @property (weak, nonatomic) IBOutlet UILabel *townLabel;
-@property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
 @property (weak, nonatomic) IBOutlet UILabel *contactLabel;
 - (IBAction)MatchButton:(id)sender;
 @property TabBarController *tabBar;
+
+@property (weak, nonatomic) IBOutlet UITableView *interestTable;
 @end

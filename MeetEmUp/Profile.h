@@ -11,6 +11,7 @@
 
 @interface Profile : NSObject
 
+@property NSInteger id;
 @property NSString* name;
 @property NSString* interests;
 @property NSString* location;

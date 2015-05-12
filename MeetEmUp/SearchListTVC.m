@@ -31,10 +31,9 @@
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
-    self.name = @"test";
-    self.tabBar = (TabBarController *)self.tabBarController;
     db = [[Database alloc] init];
     users = [NSMutableArray array];
+    self.tabBar = (TabBarController *)self.tabBarController;
     
     [db GetData:@"fetchusers.php" completion:^(NSDictionary* userResults){
         NSArray* allUsers = userResults[@"results"];
@@ -43,13 +42,27 @@
         {
             User* user = [[User alloc] initWithDictionary:dic];
             
-            //dont add yourself
-            if(![user.username isEqualToString:self.tabBar.username])
-            {
-                [users addObject:user];
-            }
             //dont add people we have already matched
-            //....
+            if([self.tabBar.peopleYouMatched isKindOfClass:[NSNull class]] || [self.tabBar.peopleYouMatched count] == 0)
+            {
+                //dont add yourself
+                if(![user.username isEqualToString:self.tabBar.username])
+                {
+                    [users addObject:user];
+                }
+            } else{
+                for(NSString* s in self.tabBar.peopleYouMatched)
+                {
+                    if([s integerValue] != user.id)
+                    {
+                        //dont add yourself
+                        if(![user.username isEqualToString:self.tabBar.username])
+                        {
+                            [users addObject:user];
+                        }
+                    }
+                }
+            }
         }
         
         dispatch_async(dispatch_get_main_queue(), ^(void){

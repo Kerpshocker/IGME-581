@@ -15,6 +15,7 @@
 
 @interface CurrentMatchListTVC (){
     Database* db;
+    NSMutableArray* profiles;
 }
 
 @end
@@ -25,6 +26,7 @@
     [super viewDidLoad];
     
     db = [[Database alloc] init];
+    profiles = [NSMutableArray array];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -37,7 +39,7 @@
     for(NSString* myMatchIds in self.tabBar.peopleYouMatched)
     {
         [db GetData:[NSString stringWithFormat:@"fetchprofile.php?ID=%i", [myMatchIds integerValue]] completion:^(NSDictionary* matchedProfileResults){
-            
+            //Run UI Updates
             for(NSDictionary* matchedDic in matchedProfileResults[@"results"])
             {
                 Profile* matchedProf = [[Profile alloc] initWithDictionary:matchedDic];
@@ -49,11 +51,15 @@
                     {
                         if([theirMatchIds integerValue] == self.tabBar.id)
                         {
-                            [self.tabBar.mutualMatches addObject:theirMatchIds];
+                            [profiles addObject:matchedProf];
                         }
                     }
                 }
             }
+            
+            dispatch_async(dispatch_get_main_queue(), ^(void){
+                [self.tableView reloadData];
+            });
         }];
     }
     
@@ -73,7 +79,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [self.tabBar.mutualMatches count];
+    return [profiles count];
 }
 
 
@@ -85,9 +91,9 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Match"];
     }
     
-    NSString* temp = [self.tabBar.mutualMatches objectAtIndex:indexPath.row];
+    Profile* temp = [profiles objectAtIndex:indexPath.row];
     CurrentMatchTableCell* customCell = (CurrentMatchTableCell*)cell;
-    customCell.matchName.text = temp;
+    customCell.matchName.text = temp.name;
     
     return cell;
 }
@@ -154,12 +160,12 @@
     if ([segue.identifier isEqualToString:@"Look"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         CurrentMatchDetailVC *destViewController = segue.destinationViewController;
-        NSString* temp = [self.tabBar.peopleYouMatched objectAtIndex:indexPath.row];
-        destViewController.matchName = temp;
-        destViewController.town = @"testTown";
-        destViewController.distance = @"testDistance";
-        destViewController.contact = @"testContact";
+        Profile* temp = [profiles objectAtIndex:indexPath.row];
+        destViewController.matchName = temp.name;
+        destViewController.town = temp.location;
+        destViewController.contact = temp.phone;
         destViewController.interests = self.tabBar.interests;
+        destViewController.id = temp.id;
     }
 }
 @end

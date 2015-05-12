@@ -55,7 +55,7 @@
                                 </prototypes>
                                 <sections/>
                                 <connections>
-                                    <outlet property="dataSource" destination="8rJ-Kc-sve" id="fWO-de-5yh"/>
+                                    <outlet property="dataSource" destination="9pv-A4-QxB" id="wuD-2s-Hck"/>
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shared Interests" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jA2-qM-TqF">
@@ -110,6 +110,7 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="contactLabel" destination="euN-hU-0WN" id="QdQ-G0-OWn"/>
+                        <outlet property="interestTable" destination="oAg-TK-HuC" id="zGe-3d-Uzb"/>
                         <outlet property="name" destination="FRH-1s-aT1" id="x8m-wz-KBf"/>
                         <outlet property="townLabel" destination="Hcu-Ly-k08" id="Mlo-j2-R39"/>
                     </connections>
@@ -886,7 +887,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="E0m-7M-N2j"/>
+        <segue reference="4dn-c9-8zA"/>
         <segue reference="y6Y-mt-lZk"/>
     </inferredMetricsTieBreakers>
 </document>

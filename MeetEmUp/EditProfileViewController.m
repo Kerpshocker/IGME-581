@@ -33,18 +33,21 @@
         dispatch_async(dispatch_get_main_queue(), ^(void){
             for(NSDictionary* dic in profileResults[@"results"]){
                 Profile* prof = [[Profile alloc] initWithDictionary:dic];
-                self.nameField.text = prof.name;
+                self.nameField.text =  prof.name;
                 self.interests = prof.interests;
                 self.townField.text = prof.location;
                 self.phoneField.text = prof.phone;
                 
                 //explode interests into array
-                self.interestsArray = [self.interests componentsSeparatedByString: @","];
-                self.interestsArrayM = [NSMutableArray array];
-                
-                for(NSString* s in self.interestsArray)
+                if(![self.interests isKindOfClass:[NSNull class]])
                 {
-                    [self.interestsArrayM addObject:s];
+                    self.interestsArray = [self.interests componentsSeparatedByString: @","];
+                    self.interestsArrayM = [NSMutableArray array];
+                    
+                    for(NSString* s in self.interestsArray)
+                    {
+                        [self.interestsArrayM addObject:s];
+                    }
                 }
             }
             //Run UI Updates

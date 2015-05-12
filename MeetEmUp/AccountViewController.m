@@ -8,6 +8,7 @@
 
 #import "AccountViewController.h"
 #import "TabBarController.h"
+#import "Profile.h"
 
 @interface AccountViewController ()
 
@@ -47,6 +48,7 @@
     {
         if([self.passwordText.text length] > 0)
         {
+            
             //make a user and put into the database before going back to Login
             User* newUser = [[User alloc] init];
             newUser.username = self.usernameText.text;
@@ -63,10 +65,12 @@
             [db SaveData:query queryParams:queryParams];
             
             NSMutableArray* profileUserParams = [NSMutableArray array];
-            [profileUserParams addObject:[NSString stringWithFormat:@"Name=%@", newUser.username]];
+            [profileUserParams addObject:[NSString stringWithFormat:@"Username=%@", newUser.username]];
             [profileUserParams addObject:[NSString stringWithFormat:@"Location=Rochester NY"]];
             
             [db SaveData:@"saveprofile.php?" queryParams:profileUserParams];
+            
+            self.username = newUser.username;
             
             [self performSegueWithIdentifier:@"Login" sender:self];
         }
@@ -78,6 +82,13 @@
     else
     {
         [self.ErrorLabel setHidden:NO];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([segue.identifier isEqualToString:@"Login"]) {
+        TabBarController *destViewController = segue.destinationViewController;
+        destViewController.username = self.username;
     }
 }
 @end

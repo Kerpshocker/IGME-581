@@ -1,17 +1,24 @@
 <?php
 	require_once("loadDB.php");
+	
+	$qsParams = $_SERVER['QUERY_STRING'];
+	//parse the qsParams
+	// qsParams => associative array named $params
+	parse_str($qsParams, $params);
 
-	$queryString = prepareQuery();
+	$queryString = prepareQuery($params);
 	queryDB($queryString);
 	
-	//this will be edited later on when we have more data in the DB
-	//this will have to order the users that we retrieve by match percentage
-	//and any other rules we place on the search
-	function prepareQuery(){
+	function prepareQuery($qsp){
 		//if we find the need to use query string values to filter our search
 		//then we would need to search based on those values
 		//for right now, just grab everything since its such a small db
-		$queryString = "SELECT * FROM User";
+		if(empty($qsp))
+		{
+			$queryString = "SELECT * FROM User";
+		} else{
+			$queryString = "SELECT * FROM User WHERE Username = '{$qsp['Username']}'";
+		}
 		
 		return $queryString;
 	}

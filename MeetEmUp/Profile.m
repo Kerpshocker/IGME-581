@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+        self.id = [dictionary[@"ID"] integerValue];
         self.name = dictionary[@"Name"] ? dictionary[@"Name"] : @"";
         self.interests = dictionary[@"Interests"] ? dictionary[@"Interests"] : @"";
         self.location = dictionary[@"Location"] ? dictionary[@"Location"] : @"";

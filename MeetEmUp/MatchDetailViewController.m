@@ -95,7 +95,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
 - (IBAction)MatchButton:(id)sender {
     //add this user to an array of users that you have hit match to, but not to the actual match list. We must first check to see if they matched you too before they are added to the mutual match list
-    [self.tabBar.peopleYouMatched addObject:self.matchName];
+    [self.tabBar.peopleYouMatched addObject:[NSNumber numberWithInt:self.id]];
     [self performSegueWithIdentifier:@"AddMatch" sender:self];
 }
 
@@ -110,7 +110,6 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         destViewController.phone = self.tabBar.phone;
         destViewController.peopleYouMatched = self.tabBar.peopleYouMatched;
         destViewController.mutualMatches= self.tabBar.mutualMatches;
-        
         destViewController.interests = self.tabBar.interests;
         
         NSMutableArray* profileData = [[NSMutableArray alloc] init];
@@ -119,6 +118,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         [profileData addObject:[NSString stringWithFormat:@"Location=%@", destViewController.town]];
         [profileData addObject:[NSString stringWithFormat:@"Phone=%@", destViewController.phone]];
         [profileData addObject:[NSString stringWithFormat:@"ID=%@",  [NSNumber numberWithInt:destViewController.id]]];
+        [profileData addObject:[NSString stringWithFormat:@"CurrentMatches=%@", [destViewController.peopleYouMatched componentsJoinedByString:@","]]];
         
         [db UpdateProfile:@"editprofile.php?" postParams:profileData];
     }

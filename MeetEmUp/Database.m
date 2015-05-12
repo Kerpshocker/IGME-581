@@ -72,12 +72,9 @@ NSString *MEETEMUP_URL = @"http://people.rit.edu/njk3054/database/";
     [UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
     
     //dynamically built url
-    NSMutableString *searchString = [NSMutableString string];
-    [searchString appendString:MEETEMUP_URL];
-    [searchString appendString:fileName];
-    [searchString appendString:[queryParams componentsJoinedByString:@"&"]];
+    NSString* searchString = [NSString stringWithFormat:@"%@%@%@", MEETEMUP_URL, fileName, [queryParams componentsJoinedByString:@"&"]];
     
-    NSURL *url = [NSURL URLWithString:searchString];
+    NSURL *url = [NSURL URLWithString: [searchString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
     
     //this is a data task where we request a resource
     NSURLSessionDataTask *dataTask = [_session dataTaskWithURL:url

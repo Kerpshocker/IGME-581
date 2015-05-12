@@ -18,8 +18,9 @@
 @property NSString* town;
 @property NSString* phone;
 @property NSInteger* age;
+@property NSString* username;
+@property NSString* password;
 
 @property NSMutableArray* peopleYouMatched;
 @property NSMutableArray* mutualMatches;
-
 @end

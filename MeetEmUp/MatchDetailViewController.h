@@ -14,6 +14,7 @@
 
 @property (nonatomic, strong) NSString *matchName;
 @property NSInteger id;
+@property NSString* contact;
 @property (nonatomic, strong) NSString *town;
 @property (nonatomic, strong) NSString *distance;
 @property NSMutableArray *interestsArrayM;

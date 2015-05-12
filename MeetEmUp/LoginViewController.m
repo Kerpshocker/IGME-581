@@ -101,7 +101,6 @@
         destViewController.id = self.loggedInUserID;
         destViewController.password = self.loginPassword;
         destViewController.username = self.loginUsername;
-        destViewController.peopleYouMatched = [NSMutableArray array];
     }
 }
 @end
