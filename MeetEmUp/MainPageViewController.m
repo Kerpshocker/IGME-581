@@ -55,6 +55,8 @@
             tabBar.phone = self.phone;
             tabBar.peopleYouMatched = self.peopleYouMatched;
             tabBar.mutualMatches = self.mutualMatches;
+            //UIImage *plate1 = [UIImage imageNamed:@"Images/plates1.tif"];
+            //[self.profilePic setImage:plate1];
         });
     }];
     

@@ -20,6 +20,7 @@
 @property NSInteger* age;
 @property NSString* username;
 @property NSString* password;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 
 @property NSMutableArray* peopleYouMatched;
 @property NSMutableArray* mutualMatches;
