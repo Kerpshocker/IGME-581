@@ -144,6 +144,15 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.interestTable reloadData];
 }
 
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // Remove the row from data model
+    [self.interestsArrayM removeObjectAtIndex:indexPath.row];
+    
+    // Request table view to reload
+    [tableView reloadData];
+}
+
 
 - (IBAction)takePhoto:(id)sender {
     

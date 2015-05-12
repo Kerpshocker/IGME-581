@@ -43,6 +43,10 @@
             for(NSDictionary* matchedDic in matchedProfileResults[@"results"])
             {
                 Profile* matchedProf = [[Profile alloc] initWithDictionary:matchedDic];
+                
+                [profiles addObject:matchedProf];
+                
+                /*
                 if(![matchedProf.currentMatches isKindOfClass:[NSNull class]])
                 {
                     NSArray* theirMatches = [matchedProf.currentMatches componentsSeparatedByString:@","];
@@ -51,10 +55,11 @@
                     {
                         if([theirMatchIds integerValue] == self.tabBar.id)
                         {
-                            [profiles addObject:matchedProf];
+                            //[profiles addObject:matchedProf];
                         }
                     }
                 }
+                 */
             }
             
             dispatch_async(dispatch_get_main_queue(), ^(void){
