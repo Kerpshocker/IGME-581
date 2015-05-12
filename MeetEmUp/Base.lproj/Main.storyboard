@@ -502,9 +502,6 @@
                             <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="2Zh-ym-nau">
                                 <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-fx-CfF">
-                                <rect key="frame" x="401" y="284" width="203" height="252"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l2Y-9g-gQq">
                                 <rect key="frame" x="331" y="558" width="72" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -532,6 +529,9 @@
                                     <segue destination="5cB-OL-Qou" kind="push" identifier="Search" id="Mc7-hb-EF1"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ProfilePics" translatesAutoresizingMaskIntoConstraints="NO" id="dZu-fx-CfF">
+                                <rect key="frame" x="283" y="256" width="203" height="280"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -556,6 +556,7 @@
                     <size key="freeformSize" width="768" height="1024"/>
                     <connections>
                         <outlet property="nameLabel" destination="dIB-5I-hGx" id="izr-so-dtd"/>
+                        <outlet property="profilePic" destination="dZu-fx-CfF" id="lsA-PI-JdU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l8k-w7-g13" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -887,6 +888,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="E0m-7M-N2j"/>
-        <segue reference="y6Y-mt-lZk"/>
+        <segue reference="YHv-wW-Ru9"/>
     </inferredMetricsTieBreakers>
 </document>

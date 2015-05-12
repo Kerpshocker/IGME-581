@@ -202,6 +202,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         [profileData addObject:[NSString stringWithFormat:@"ID=%@",  [NSNumber numberWithInt:destViewController.id]]];
         
         [db UpdateProfile:@"editprofile.php?" postParams:profileData];
+        
+        //images
     }
 }
 @end

@@ -37,10 +37,13 @@
                 self.phone = prof.phone;
                 
                 //matches
-                NSArray* temp = [prof.currentMatches componentsSeparatedByString:@","];
-                for(NSString* s in temp)
+                if(![prof.currentMatches isKindOfClass:[NSNull class]])
                 {
-                    [self.peopleYouMatched addObject:s];
+                    NSArray* temp = [prof.currentMatches componentsSeparatedByString:@","];
+                    for(NSString* s in temp)
+                    {
+                        [self.peopleYouMatched addObject:s];
+                    }
                 }
             }
             
@@ -50,6 +53,9 @@
             tabBar.town = self.town;
             tabBar.phone = self.phone;
             tabBar.peopleYouMatched = self.peopleYouMatched;
+            
+            //UIImage *plate1 = [UIImage imageNamed:@"Images/plates1.tif"];
+            //[self.profilePic setImage:plate1];
         });
     }];
     

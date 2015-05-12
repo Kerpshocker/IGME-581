@@ -18,6 +18,7 @@
 @property NSString* town;
 @property NSString* phone;
 @property NSInteger* age;
+@property (weak, nonatomic) IBOutlet UIImageView *profilePic;
 
 @property NSMutableArray* peopleYouMatched;
 @property NSMutableArray* mutualMatches;
