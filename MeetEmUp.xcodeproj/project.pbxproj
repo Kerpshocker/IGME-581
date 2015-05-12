@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3F0339461AF3FD76007DA47D /* MeetEmUpScreen2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */; };
 		3F0339471AF3FD76007DA47D /* Icon_Favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339411AF3FD76007DA47D /* Icon_Favorite.png */; };
 		3F0339481AF3FD76007DA47D /* Icon_Profile.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339421AF3FD76007DA47D /* Icon_Profile.png */; };
 		3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F0339431AF3FD76007DA47D /* MEU Logo2.png */; };
@@ -26,9 +25,10 @@
 		3F43FD131AB6356D00BD3100 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F43FD121AB6356D00BD3100 /* User.m */; };
 		3F65D65B1AE976360053F022 /* InterestTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F65D65A1AE976360053F022 /* InterestTableCell.m */; };
 		3F6C53C01ACDDA44006905A3 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */; };
-		3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */; };
 		3FA4D4951ADEFF89006CD755 /* MatchDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */; };
 		3FA4D4981ADF1B9E006CD755 /* Profile.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FA4D4971ADF1B9E006CD755 /* Profile.m */; };
+		3FE42EDD1B026561008477BE /* MeetEmUpScreen_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE42EDC1B026561008477BE /* MeetEmUpScreen_iPad.png */; };
+		3FE42EDF1B0265A2008477BE /* MEU App Icon_iPad.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FE42EDE1B0265A2008477BE /* MEU App Icon_iPad.png */; };
 		3FE64D391ACF22CD00F786F3 /* AccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D381ACF22CD00F786F3 /* AccountViewController.m */; };
 		3FE64D3C1ACF2DDA00F786F3 /* Database.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE64D3B1ACF2DDA00F786F3 /* Database.m */; };
 		3FE8A9DA1AFC401700585AE4 /* CurrentMatchDetailVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FE8A9D91AFC401700585AE4 /* CurrentMatchDetailVC.m */; };
@@ -52,7 +52,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeetEmUpScreen2.png; sourceTree = "<group>"; };
 		3F0339411AF3FD76007DA47D /* Icon_Favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Favorite.png; sourceTree = "<group>"; };
 		3F0339421AF3FD76007DA47D /* Icon_Profile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Icon_Profile.png; sourceTree = "<group>"; };
 		3F0339431AF3FD76007DA47D /* MEU Logo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU Logo2.png"; sourceTree = "<group>"; };
@@ -79,11 +78,12 @@
 		3F65D65A1AE976360053F022 /* InterestTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InterestTableCell.m; sourceTree = "<group>"; };
 		3F6C53BE1ACDDA44006905A3 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		3F6C53BF1ACDDA44006905A3 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MeetEmUpScreen.png; path = Images.xcassets/first.imageset/MeetEmUpScreen.png; sourceTree = "<group>"; };
 		3FA4D4931ADEFF89006CD755 /* MatchDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatchDetailViewController.h; sourceTree = "<group>"; };
 		3FA4D4941ADEFF89006CD755 /* MatchDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MatchDetailViewController.m; sourceTree = "<group>"; };
 		3FA4D4961ADF1B9E006CD755 /* Profile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Profile.h; sourceTree = "<group>"; };
 		3FA4D4971ADF1B9E006CD755 /* Profile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Profile.m; sourceTree = "<group>"; };
+		3FE42EDC1B026561008477BE /* MeetEmUpScreen_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MeetEmUpScreen_iPad.png; sourceTree = "<group>"; };
+		3FE42EDE1B0265A2008477BE /* MEU App Icon_iPad.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MEU App Icon_iPad.png"; sourceTree = "<group>"; };
 		3FE64D371ACF22CD00F786F3 /* AccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountViewController.h; sourceTree = "<group>"; };
 		3FE64D381ACF22CD00F786F3 /* AccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountViewController.m; sourceTree = "<group>"; };
 		3FE64D3A1ACF2DDA00F786F3 /* Database.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Database.h; sourceTree = "<group>"; };
@@ -191,12 +191,12 @@
 		3FE8A9D41AFC3EBF00585AE4 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				3FE42EDE1B0265A2008477BE /* MEU App Icon_iPad.png */,
+				3FE42EDC1B026561008477BE /* MeetEmUpScreen_iPad.png */,
 				3F2A93FD1AFD4F8900DAAB01 /* Icon_Search.png */,
 				3F2A93FB1AFD4BA500DAAB01 /* background.png */,
 				3F2A93F71AFD470300DAAB01 /* purple.png */,
 				3F2A93F51AFD44E100DAAB01 /* Icon_Home.png */,
-				3F6D43CB1ACF282F000DA81D /* MeetEmUpScreen.png */,
-				3F0339401AF3FD76007DA47D /* MeetEmUpScreen2.png */,
 				3F0339411AF3FD76007DA47D /* Icon_Favorite.png */,
 				3F0339421AF3FD76007DA47D /* Icon_Profile.png */,
 				3F0339431AF3FD76007DA47D /* MEU Logo2.png */,
@@ -362,16 +362,16 @@
 				3F03394B1AF3FD76007DA47D /* MEU App Icon2.png in Resources */,
 				3F2A93FC1AFD4BA500DAAB01 /* background.png in Resources */,
 				3F43FCF41AB61C3500BD3100 /* Main.storyboard in Resources */,
+				3FE42EDF1B0265A2008477BE /* MEU App Icon_iPad.png in Resources */,
 				3F0339491AF3FD76007DA47D /* MEU Logo2.png in Resources */,
+				3FE42EDD1B026561008477BE /* MeetEmUpScreen_iPad.png in Resources */,
 				3F2A93F61AFD44E100DAAB01 /* Icon_Home.png in Resources */,
 				3F2A93F81AFD470300DAAB01 /* purple.png in Resources */,
-				3F0339461AF3FD76007DA47D /* MeetEmUpScreen2.png in Resources */,
 				3F43FCF91AB61C3500BD3100 /* LaunchScreen.xib in Resources */,
 				3F43FCF61AB61C3500BD3100 /* Images.xcassets in Resources */,
 				3F03394A1AF3FD76007DA47D /* Icon_List.png in Resources */,
 				3F0339481AF3FD76007DA47D /* Icon_Profile.png in Resources */,
 				3F2A93FE1AFD4F8900DAAB01 /* Icon_Search.png in Resources */,
-				3F6D43CC1ACF282F000DA81D /* MeetEmUpScreen.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

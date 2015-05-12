@@ -144,6 +144,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.interestTable reloadData];
 }
 
+
 - (IBAction)takePhoto:(id)sender {
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];

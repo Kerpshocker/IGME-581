@@ -10,7 +10,7 @@
             <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MeetEmUpScreen2.png" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-Oe-Mdi">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MeetEmUpScreen_iPad.png" translatesAutoresizingMaskIntoConstraints="NO" id="fe0-Oe-Mdi">
                     <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                 </imageView>
             </subviews>
@@ -21,6 +21,6 @@
         </view>
     </objects>
     <resources>
-        <image name="MeetEmUpScreen2.png" width="750" height="1334"/>
+        <image name="MeetEmUpScreen_iPad.png" width="768" height="1024"/>
     </resources>
 </document>
