@@ -153,10 +153,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MatchDetailViewController *destViewController = segue.destinationViewController;
         User* temp = [users objectAtIndex:indexPath.row];
-        destViewController.matchName = temp.username;
-        destViewController.town = @"testTown";
-        destViewController.distance = @"testDistance";
-        destViewController.interests = self.tabBar.interests;
+        destViewController.id = temp.id;
+        destViewController.tabBar = self.tabBar;
     }
 }
 
