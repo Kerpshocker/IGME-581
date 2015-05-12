@@ -19,6 +19,7 @@
 
 @implementation SearchListTVC{
     NSMutableArray* users;
+    NSMutableArray* potentialMatches;
     Database* db;
 }
 
@@ -33,6 +34,7 @@
     
     db = [[Database alloc] init];
     users = [NSMutableArray array];
+    potentialMatches = [NSMutableArray array];
     self.tabBar = (TabBarController *)self.tabBarController;
     
     [db GetData:@"fetchusers.php" completion:^(NSDictionary* userResults){
@@ -42,23 +44,28 @@
         {
             User* user = [[User alloc] initWithDictionary:dic];
             
+            [users addObject:user];
+        }
+        
+        for(int i = 0; i < users.count; i++)
+        {
             //dont add people we have already matched
             if([self.tabBar.peopleYouMatched isKindOfClass:[NSNull class]] || [self.tabBar.peopleYouMatched count] == 0)
             {
                 //dont add yourself
-                if(![user.username isEqualToString:self.tabBar.username])
+                if(![[[users objectAtIndex:i] username] isEqualToString:self.tabBar.username])
                 {
-                    [users addObject:user];
+                    [potentialMatches addObject:[users objectAtIndex:1]];
                 }
             } else{
                 for(NSString* s in self.tabBar.peopleYouMatched)
                 {
-                    if([s integerValue] != user.id)
+                    if([s integerValue] != [[users objectAtIndex:i] id])
                     {
                         //dont add yourself
-                        if(![user.username isEqualToString:self.tabBar.username])
+                        if(![[[users objectAtIndex:i] username] isEqualToString:self.tabBar.username])
                         {
-                            [users addObject:user];
+                            [potentialMatches addObject:[users objectAtIndex:i]];
                         }
                     }
                 }
@@ -92,7 +99,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [users count];
+    return [potentialMatches count];
 }
 
 
@@ -104,7 +111,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"SearchedUser"];
     }
     
-    User* temp = [users objectAtIndex:indexPath.row];
+    User* temp = [potentialMatches objectAtIndex:indexPath.row];
     SearchedUserCell* customCell = (SearchedUserCell*)cell;
     customCell.matchName.text = temp.username;
     
@@ -165,7 +172,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     if ([segue.identifier isEqualToString:@"ViewMatch"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         MatchDetailViewController *destViewController = segue.destinationViewController;
-        User* temp = [users objectAtIndex:indexPath.row];
+        User* temp = [potentialMatches objectAtIndex:indexPath.row];
         destViewController.id = temp.id;
         destViewController.tabBar = self.tabBar;
     }
