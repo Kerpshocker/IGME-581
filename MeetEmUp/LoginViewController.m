@@ -100,11 +100,8 @@
         destViewController.name = self.loginUsername;
         destViewController.password = self.loginPassword;
         destViewController.username = self.loginUsername;
-        destViewController.interests = [NSMutableArray array];
         destViewController.peopleYouMatched = [NSMutableArray array];
         destViewController.mutualMatches = [NSMutableArray array];
-        destViewController.town = @"Town";
-        destViewController.phone = @"***-***-****";
     }
 }
 @end

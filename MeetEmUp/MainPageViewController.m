@@ -21,13 +21,7 @@
     self.id = tabBar.id;
     self.name = tabBar.name;
     self.nameLabel.text = self.name;
-    self.interestsString = tabBar.interests;
-    self.town = tabBar.town;
-    self.phone = tabBar.phone;
-    
-    //matches
-    self.peopleYouMatched = tabBar.peopleYouMatched;
-    self.mutualMatches = tabBar.mutualMatches;
+
     
     NSLog(@"%i", self.id);
 }

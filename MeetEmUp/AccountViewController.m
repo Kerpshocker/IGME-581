@@ -62,6 +62,12 @@
             
             [db SaveData:query queryParams:queryParams];
             
+            NSMutableArray* profileUserParams = [NSMutableArray array];
+            [profileUserParams addObject:[NSString stringWithFormat:@"Name=%@", newUser.username]];
+            [profileUserParams addObject:[NSString stringWithFormat:@"Location=Rochester NY"]];
+            
+            [db SaveData:@"saveprofile.php?" queryParams:profileUserParams];
+            
             [self performSegueWithIdentifier:@"Login" sender:self];
         }
         else
